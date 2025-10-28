@@ -1,0 +1,13 @@
+{
+  "precision": 0.75,
+  "recall": 1.0,
+  "f1": 0.8571428571428571,
+  "roc_auc": 1.0,
+  "confusion_matrix": {
+    "tn": 0,
+    "fp": 1,
+    "fn": 0,
+    "tp": 3
+  },
+  "n_samples": 4
+}
