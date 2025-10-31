@@ -148,14 +148,17 @@ def augment_sequence(sequence,
     return augmented
 
 
-def augment_batch(X, y, 
+def augment_batch(X, y,
                   augment_prob=0.5,
                   apply_time_warp=True,
                   apply_noise=True,
-                  apply_dropout=True):
+                  apply_dropout=True,
+                  warp_factor=0.1,
+                  noise_factor=0.05,
+                  dropout_rate=0.1):
     """
     Augment a batch of sequences.
-    
+
     Args:
         X: (N, T, D) array of sequences
         y: (N,) array of labels
@@ -163,23 +166,73 @@ def augment_batch(X, y,
         apply_time_warp: Whether to apply time warping
         apply_noise: Whether to apply noise
         apply_dropout: Whether to apply feature dropout
-    
+        warp_factor: Time warp factor (default: 0.1 for ±10%)
+        noise_factor: Noise factor (default: 0.05 for ±5%)
+        dropout_rate: Feature dropout rate (default: 0.1)
+
     Returns:
         Augmented X, y (same shapes)
     """
     N = len(X)
     X_aug = X.copy()
-    
+
     for i in range(N):
         if np.random.random() < augment_prob:
             X_aug[i] = augment_sequence(
                 X[i],
                 apply_time_warp=apply_time_warp,
                 apply_noise=apply_noise,
-                apply_dropout=apply_dropout
+                apply_dropout=apply_dropout,
+                warp_factor=warp_factor,
+                noise_factor=noise_factor,
+                dropout_rate=dropout_rate
             )
-    
+
     return X_aug, y
+
+
+def get_augmentation_params(mode='moderate'):
+    """
+    Get augmentation parameters for different modes.
+
+    Args:
+        mode: 'none', 'moderate', or 'strong'
+
+    Returns:
+        Dictionary of augmentation parameters
+    """
+    if mode == 'none':
+        return {
+            'augment_prob': 0.0,
+            'apply_time_warp': False,
+            'apply_noise': False,
+            'apply_dropout': False,
+            'warp_factor': 0.0,
+            'noise_factor': 0.0,
+            'dropout_rate': 0.0
+        }
+    elif mode == 'moderate':
+        return {
+            'augment_prob': 0.5,
+            'apply_time_warp': True,
+            'apply_noise': True,
+            'apply_dropout': True,
+            'warp_factor': 0.1,  # ±10%
+            'noise_factor': 0.05,  # σ=0.05
+            'dropout_rate': 0.1  # 10%
+        }
+    elif mode == 'strong':
+        return {
+            'augment_prob': 0.7,
+            'apply_time_warp': True,
+            'apply_noise': True,
+            'apply_dropout': True,
+            'warp_factor': 0.15,  # ±15%
+            'noise_factor': 0.07,  # σ=0.07
+            'dropout_rate': 0.1  # 10%
+        }
+    else:
+        raise ValueError(f"Unknown augmentation mode: {mode}")
 
 
 if __name__ == '__main__':

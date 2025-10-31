@@ -1,0 +1,17 @@
+{
+  "v_threshold": -0.12,
+  "alpha_threshold": 40.0,
+  "m_threshold": 0.02,
+  "rapid_descent_frames": 2,
+  "stillness_frames": 12,
+  "window_size": 90,
+  "_comments": {
+    "v_threshold": "Vertical velocity threshold for rapid descent (negative = downward). Phase 4.7: Relaxed from -0.28 to -0.12 for better sensitivity",
+    "alpha_threshold": "Torso angle threshold for orientation flip in degrees. Phase 4.7: Relaxed from 65° to 40° for better sensitivity",
+    "m_threshold": "Motion magnitude threshold for stillness. Default: 0.02 normalized units",
+    "rapid_descent_frames": "Minimum consecutive frames for rapid descent detection. Default: 2 frames",
+    "stillness_frames": "Minimum consecutive frames for stillness detection. Default: 12 frames (~0.4 seconds at 30 FPS)",
+    "window_size": "Size of sliding window to check all conditions in frames. Default: 90 frames (3 seconds at 30 FPS)"
+  }
+}
+
