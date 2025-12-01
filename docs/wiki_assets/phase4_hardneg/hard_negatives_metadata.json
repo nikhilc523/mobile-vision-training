@@ -1,0 +1,2509 @@
+{
+  "total_windows": 17166,
+  "false_positives": 41,
+  "false_positive_rate": 0.002388442269602703,
+  "top_k": 500,
+  "threshold": 0.81,
+  "hard_negatives": [
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g22_c02",
+      "window_index": 0,
+      "probability": 0.0002838911605067551
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g20_c05",
+      "window_index": 6,
+      "probability": 0.00028715995722450316
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c05",
+      "window_index": 12,
+      "probability": 0.0002880539104808122
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g07_c01",
+      "window_index": 3,
+      "probability": 0.00028822943568229675
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g02_c02",
+      "window_index": 2,
+      "probability": 0.0002888285380322486
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g21_c01",
+      "window_index": 3,
+      "probability": 0.0002890555770136416
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g13_c04",
+      "window_index": 13,
+      "probability": 0.00028936658054590225
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (50)",
+      "window_index": 24,
+      "probability": 0.00029062098474241793
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g07_c02",
+      "window_index": 3,
+      "probability": 0.0002922210260294378
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g07_c06",
+      "window_index": 21,
+      "probability": 0.0002924125292338431
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (50)",
+      "window_index": 189,
+      "probability": 0.00029522241675294936
+    },
+    {
+      "video_name": "urfd_adl_adl-10-cam0-rgb",
+      "window_index": 6,
+      "probability": 0.0002958468103315681
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g12_c03",
+      "window_index": 2,
+      "probability": 0.00029774801805615425
+    },
+    {
+      "video_name": "le2i_Lecture room_video (21)",
+      "window_index": 92,
+      "probability": 0.0002981690049637109
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 6,
+      "probability": 0.00029870704747736454
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g09_c01",
+      "window_index": 12,
+      "probability": 0.00030061660800129175
+    },
+    {
+      "video_name": "ucf101_PullUps_v_PullUps_g20_c02",
+      "window_index": 2,
+      "probability": 0.00030104623874649405
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g13_c04",
+      "window_index": 18,
+      "probability": 0.0003012233937624842
+    },
+    {
+      "video_name": "urfd_adl_adl-03-cam0-rgb",
+      "window_index": 4,
+      "probability": 0.0003019563155248761
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c03",
+      "window_index": 3,
+      "probability": 0.0003042556927539408
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g15_c01",
+      "window_index": 0,
+      "probability": 0.00030513328965753317
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g15_c01",
+      "window_index": 1,
+      "probability": 0.00030529240029864013
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g19_c01",
+      "window_index": 10,
+      "probability": 0.0003068845544476062
+    },
+    {
+      "video_name": "le2i_Lecture room_video (13)",
+      "window_index": 37,
+      "probability": 0.00030817202059552073
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g21_c02",
+      "window_index": 13,
+      "probability": 0.00030877903918735683
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g10_c01",
+      "window_index": 11,
+      "probability": 0.0003126240917481482
+    },
+    {
+      "video_name": "le2i_Lecture room_video (18)",
+      "window_index": 50,
+      "probability": 0.00031276867957785726
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c03",
+      "window_index": 0,
+      "probability": 0.00031322945142164826
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (50)",
+      "window_index": 187,
+      "probability": 0.00031392218079417944
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g21_c03",
+      "window_index": 7,
+      "probability": 0.0003149825206492096
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g20_c05",
+      "window_index": 10,
+      "probability": 0.0003172113501932472
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g21_c02",
+      "window_index": 4,
+      "probability": 0.00031854413100518286
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g05_c02",
+      "window_index": 6,
+      "probability": 0.0003237495548091829
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c07",
+      "window_index": 9,
+      "probability": 0.000323773012496531
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c07",
+      "window_index": 17,
+      "probability": 0.00032480500522069633
+    },
+    {
+      "video_name": "urfd_adl_adl-11-cam0-rgb",
+      "window_index": 7,
+      "probability": 0.0003251805028412491
+    },
+    {
+      "video_name": "le2i_Home_02_video (31)",
+      "window_index": 25,
+      "probability": 0.0003289945307187736
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g08_c02",
+      "window_index": 4,
+      "probability": 0.0003291542234364897
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c02",
+      "window_index": 0,
+      "probability": 0.00033025533775798976
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g19_c01",
+      "window_index": 9,
+      "probability": 0.0003307730075903237
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (47)",
+      "window_index": 49,
+      "probability": 0.0003307985607534647
+    },
+    {
+      "video_name": "le2i_Lecture room_video (23)",
+      "window_index": 39,
+      "probability": 0.0003331491316203028
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 7,
+      "probability": 0.0003336984373163432
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g19_c01",
+      "window_index": 12,
+      "probability": 0.0003337197413202375
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g05_c02",
+      "window_index": 8,
+      "probability": 0.0003365938027855009
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (50)",
+      "window_index": 98,
+      "probability": 0.00033726062974892557
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 14,
+      "probability": 0.0003374520456418395
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g07_c04",
+      "window_index": 1,
+      "probability": 0.00033932054066099226
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (50)",
+      "window_index": 99,
+      "probability": 0.00033956096740439534
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g13_c04",
+      "window_index": 13,
+      "probability": 0.0003411067009437829
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g19_c01",
+      "window_index": 14,
+      "probability": 0.00034175082691945136
+    },
+    {
+      "video_name": "le2i_Lecture room_video (26)",
+      "window_index": 72,
+      "probability": 0.0003424288588576019
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g10_c02",
+      "window_index": 10,
+      "probability": 0.000342570710927248
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c04",
+      "window_index": 4,
+      "probability": 0.0003427945193834603
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g13_c01",
+      "window_index": 0,
+      "probability": 0.0003440332075115293
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g06_c02",
+      "window_index": 8,
+      "probability": 0.00034562975633889437
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g03_c03",
+      "window_index": 2,
+      "probability": 0.0003482831525616348
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g16_c04",
+      "window_index": 17,
+      "probability": 0.0003499381127767265
+    },
+    {
+      "video_name": "ucf101_PullUps_v_PullUps_g23_c01",
+      "window_index": 14,
+      "probability": 0.00035308077349327505
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g07_c03",
+      "window_index": 2,
+      "probability": 0.0003550493565853685
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g03_c02",
+      "window_index": 2,
+      "probability": 0.00035693286918103695
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g21_c03",
+      "window_index": 19,
+      "probability": 0.00035782580380328
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g20_c06",
+      "window_index": 1,
+      "probability": 0.00035875450703315437
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (46)",
+      "window_index": 21,
+      "probability": 0.0003590939741116017
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 5,
+      "probability": 0.00036041735438629985
+    },
+    {
+      "video_name": "le2i_Office_video (25)",
+      "window_index": 30,
+      "probability": 0.00036070364876650274
+    },
+    {
+      "video_name": "le2i_Home_01_video (12)",
+      "window_index": 13,
+      "probability": 0.0003611012361943722
+    },
+    {
+      "video_name": "le2i_Office_video (29)",
+      "window_index": 98,
+      "probability": 0.000361364014679566
+    },
+    {
+      "video_name": "le2i_Lecture room_video (26)",
+      "window_index": 22,
+      "probability": 0.0003648375568445772
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c03",
+      "window_index": 4,
+      "probability": 0.00036485082819126546
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g20_c01",
+      "window_index": 9,
+      "probability": 0.00036721493233926594
+    },
+    {
+      "video_name": "le2i_Office_video (29)",
+      "window_index": 4,
+      "probability": 0.0003688105207402259
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g19_c01",
+      "window_index": 15,
+      "probability": 0.00037179101491346955
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g12_c01",
+      "window_index": 2,
+      "probability": 0.00037547078682109714
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g21_c01",
+      "window_index": 6,
+      "probability": 0.00037609736318700016
+    },
+    {
+      "video_name": "le2i_Office_video (26)",
+      "window_index": 0,
+      "probability": 0.0003763943677768111
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g05_c02",
+      "window_index": 22,
+      "probability": 0.0003800175036303699
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g13_c04",
+      "window_index": 7,
+      "probability": 0.0003813602670561522
+    },
+    {
+      "video_name": "le2i_Lecture room_video (27)",
+      "window_index": 0,
+      "probability": 0.00038540319656021893
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 3,
+      "probability": 0.00038549909368157387
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g02_c04",
+      "window_index": 2,
+      "probability": 0.0003868620260618627
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g15_c07",
+      "window_index": 13,
+      "probability": 0.000392666959669441
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g19_c01",
+      "window_index": 13,
+      "probability": 0.0003944138006772846
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (52)",
+      "window_index": 14,
+      "probability": 0.00039648113306611776
+    },
+    {
+      "video_name": "le2i_Lecture room_video (12)",
+      "window_index": 37,
+      "probability": 0.0003973497950937599
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g02_c03",
+      "window_index": 1,
+      "probability": 0.0003978026215918362
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g22_c02",
+      "window_index": 23,
+      "probability": 0.00039863665006123483
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g08_c02",
+      "window_index": 2,
+      "probability": 0.0004002965579275042
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g16_c01",
+      "window_index": 4,
+      "probability": 0.0004060222418047488
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 2,
+      "probability": 0.00040640239603817463
+    },
+    {
+      "video_name": "urfd_adl_adl-02-cam0-rgb",
+      "window_index": 6,
+      "probability": 0.0004148779553361237
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g12_c04",
+      "window_index": 3,
+      "probability": 0.0004154455673415214
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g11_c01",
+      "window_index": 2,
+      "probability": 0.000415711518144235
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g15_c01",
+      "window_index": 2,
+      "probability": 0.00041856238385662436
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 4,
+      "probability": 0.00041856360621750355
+    },
+    {
+      "video_name": "le2i_Lecture room_video (19)",
+      "window_index": 76,
+      "probability": 0.00041995084029622376
+    },
+    {
+      "video_name": "le2i_Home_02_video (31)",
+      "window_index": 24,
+      "probability": 0.0004216782108414918
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g15_c02",
+      "window_index": 0,
+      "probability": 0.00042435721843503416
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g20_c06",
+      "window_index": 6,
+      "probability": 0.0004259877896402031
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g21_c05",
+      "window_index": 18,
+      "probability": 0.0004291659570299089
+    },
+    {
+      "video_name": "le2i_Office_video (29)",
+      "window_index": 74,
+      "probability": 0.00043104117503389716
+    },
+    {
+      "video_name": "urfd_adl_adl-11-cam0-rgb",
+      "window_index": 3,
+      "probability": 0.00043234252370893955
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g07_c07",
+      "window_index": 8,
+      "probability": 0.0004339400911703706
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 109,
+      "probability": 0.00043565721716731787
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 9,
+      "probability": 0.0004360453167464584
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (46)",
+      "window_index": 22,
+      "probability": 0.0004361338505987078
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g02_c03",
+      "window_index": 2,
+      "probability": 0.0004420830518938601
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g03_c04",
+      "window_index": 8,
+      "probability": 0.0004424250510055572
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (46)",
+      "window_index": 20,
+      "probability": 0.0004425633233040571
+    },
+    {
+      "video_name": "le2i_Home_01_video (27)",
+      "window_index": 4,
+      "probability": 0.00044731146772392094
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g12_c01",
+      "window_index": 0,
+      "probability": 0.00045054772635921836
+    },
+    {
+      "video_name": "le2i_Home_01_video (27)",
+      "window_index": 19,
+      "probability": 0.00045570958172902465
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 8,
+      "probability": 0.00045843093539588153
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c04",
+      "window_index": 20,
+      "probability": 0.0004606878210324794
+    },
+    {
+      "video_name": "le2i_Office_video (18)",
+      "window_index": 54,
+      "probability": 0.00046180287608876824
+    },
+    {
+      "video_name": "le2i_Lecture room_video (5)",
+      "window_index": 18,
+      "probability": 0.0004648392496164888
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g03_c04",
+      "window_index": 7,
+      "probability": 0.00046539277536794543
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c02",
+      "window_index": 5,
+      "probability": 0.000467298406874761
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c04",
+      "window_index": 1,
+      "probability": 0.0004674430238083005
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g09_c02",
+      "window_index": 7,
+      "probability": 0.0004699012788478285
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c01",
+      "window_index": 1,
+      "probability": 0.00047209608601406217
+    },
+    {
+      "video_name": "urfd_adl_adl-06-cam0-rgb",
+      "window_index": 4,
+      "probability": 0.00047773998812772334
+    },
+    {
+      "video_name": "le2i_Lecture room_video (21)",
+      "window_index": 19,
+      "probability": 0.00047974768676795065
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g02_c03",
+      "window_index": 0,
+      "probability": 0.0004817038425244391
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (33)",
+      "window_index": 8,
+      "probability": 0.00048481690464541316
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (50)",
+      "window_index": 188,
+      "probability": 0.00048552820226177573
+    },
+    {
+      "video_name": "le2i_Home_01_video (7)",
+      "window_index": 18,
+      "probability": 0.0004906108370050788
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g16_c01",
+      "window_index": 3,
+      "probability": 0.0004906434915028512
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g02_c04",
+      "window_index": 1,
+      "probability": 0.0004938482888974249
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c02",
+      "window_index": 3,
+      "probability": 0.0004968370776623487
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g03_c03",
+      "window_index": 3,
+      "probability": 0.0004984170664101839
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (68)",
+      "window_index": 79,
+      "probability": 0.0005003249389119446
+    },
+    {
+      "video_name": "urfd_adl_adl-31-cam0-rgb",
+      "window_index": 4,
+      "probability": 0.0005011606845073402
+    },
+    {
+      "video_name": "urfd_adl_adl-10-cam0-rgb",
+      "window_index": 8,
+      "probability": 0.0005023463163524866
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g04_c03",
+      "window_index": 15,
+      "probability": 0.0005045999423600733
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g04_c03",
+      "window_index": 10,
+      "probability": 0.0005095918313600123
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g08_c03",
+      "window_index": 14,
+      "probability": 0.0005117413820698857
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g05_c01",
+      "window_index": 4,
+      "probability": 0.0005122159491293132
+    },
+    {
+      "video_name": "le2i_Lecture room_video (18)",
+      "window_index": 34,
+      "probability": 0.0005217225989326835
+    },
+    {
+      "video_name": "urfd_adl_adl-09-cam0-rgb",
+      "window_index": 5,
+      "probability": 0.0005260197794996202
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c03",
+      "window_index": 1,
+      "probability": 0.0005271980189718306
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g12_c02",
+      "window_index": 1,
+      "probability": 0.0005276273586787283
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (12)",
+      "window_index": 11,
+      "probability": 0.0005290613626129925
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c01",
+      "window_index": 5,
+      "probability": 0.0005299902404658496
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g20_c05",
+      "window_index": 1,
+      "probability": 0.0005315733142197132
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 102,
+      "probability": 0.0005316800670698285
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g13_c06",
+      "window_index": 15,
+      "probability": 0.0005318571347743273
+    },
+    {
+      "video_name": "urfd_adl_adl-25-cam0-rgb",
+      "window_index": 0,
+      "probability": 0.0005348006961867213
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g15_c04",
+      "window_index": 0,
+      "probability": 0.0005366337136365473
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (64)",
+      "window_index": 14,
+      "probability": 0.0005403175600804389
+    },
+    {
+      "video_name": "le2i_Lecture room_video (16)",
+      "window_index": 13,
+      "probability": 0.000540472858119756
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g05_c02",
+      "window_index": 1,
+      "probability": 0.000541873334441334
+    },
+    {
+      "video_name": "urfd_adl_adl-11-cam0-rgb",
+      "window_index": 4,
+      "probability": 0.000542777415830642
+    },
+    {
+      "video_name": "urfd_adl_adl-10-cam0-rgb",
+      "window_index": 7,
+      "probability": 0.000544839829672128
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c02",
+      "window_index": 1,
+      "probability": 0.0005469720927067101
+    },
+    {
+      "video_name": "le2i_Lecture room_video (18)",
+      "window_index": 71,
+      "probability": 0.0005475010257214308
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g09_c06",
+      "window_index": 6,
+      "probability": 0.000548140611499548
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g21_c01",
+      "window_index": 4,
+      "probability": 0.0005481750704348087
+    },
+    {
+      "video_name": "le2i_Home_01_video (27)",
+      "window_index": 20,
+      "probability": 0.0005484188441187143
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (17)",
+      "window_index": 2,
+      "probability": 0.0005514936055988073
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (4)",
+      "window_index": 16,
+      "probability": 0.0005544804153032601
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (50)",
+      "window_index": 55,
+      "probability": 0.0005771514843218029
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (39)",
+      "window_index": 5,
+      "probability": 0.0005793477757833898
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g20_c06",
+      "window_index": 8,
+      "probability": 0.000579615356400609
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g08_c01",
+      "window_index": 16,
+      "probability": 0.0005820579244755208
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c04",
+      "window_index": 3,
+      "probability": 0.0005825310363434255
+    },
+    {
+      "video_name": "urfd_adl_adl-10-cam0-rgb",
+      "window_index": 12,
+      "probability": 0.000583722023293376
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 127,
+      "probability": 0.000586602371186018
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g13_c04",
+      "window_index": 19,
+      "probability": 0.0005869451561011374
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g11_c03",
+      "window_index": 0,
+      "probability": 0.0006085391505621374
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (22)",
+      "window_index": 0,
+      "probability": 0.0006106176879256964
+    },
+    {
+      "video_name": "le2i_Lecture room_video (7)",
+      "window_index": 29,
+      "probability": 0.0006131991976872087
+    },
+    {
+      "video_name": "le2i_Lecture room_video (26)",
+      "window_index": 82,
+      "probability": 0.0006148990360088646
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g13_c01",
+      "window_index": 8,
+      "probability": 0.0006196402246132493
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g11_c02",
+      "window_index": 14,
+      "probability": 0.0006225929246284068
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g22_c02",
+      "window_index": 17,
+      "probability": 0.0006234491593204439
+    },
+    {
+      "video_name": "le2i_Home_02_video (31)",
+      "window_index": 23,
+      "probability": 0.000624435197096318
+    },
+    {
+      "video_name": "le2i_Home_01_video (27)",
+      "window_index": 21,
+      "probability": 0.0006297069485299289
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g12_c03",
+      "window_index": 5,
+      "probability": 0.0006347654853016138
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c04",
+      "window_index": 12,
+      "probability": 0.0006366788293235004
+    },
+    {
+      "video_name": "le2i_Lecture room_video (23)",
+      "window_index": 38,
+      "probability": 0.0006378153921104968
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (68)",
+      "window_index": 80,
+      "probability": 0.0006398712866939604
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g13_c04",
+      "window_index": 12,
+      "probability": 0.000648624321911484
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 0,
+      "probability": 0.0006497064605355263
+    },
+    {
+      "video_name": "urfd_adl_adl-09-cam0-rgb",
+      "window_index": 1,
+      "probability": 0.0006527365185320377
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g03_c01",
+      "window_index": 2,
+      "probability": 0.0006531235412694514
+    },
+    {
+      "video_name": "urfd_adl_adl-04-cam0-rgb",
+      "window_index": 4,
+      "probability": 0.0006586057133972645
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g03_c02",
+      "window_index": 3,
+      "probability": 0.0006592974532395601
+    },
+    {
+      "video_name": "le2i_Lecture room_video (25)",
+      "window_index": 13,
+      "probability": 0.000663910002913326
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g10_c01",
+      "window_index": 6,
+      "probability": 0.0006668540299870074
+    },
+    {
+      "video_name": "le2i_Home_02_video (37)",
+      "window_index": 16,
+      "probability": 0.0006715982453897595
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c01",
+      "window_index": 3,
+      "probability": 0.0006732019246555865
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (68)",
+      "window_index": 83,
+      "probability": 0.0006799304974265397
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 118,
+      "probability": 0.0006804987206123769
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g07_c03",
+      "window_index": 15,
+      "probability": 0.0006828114273957908
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (52)",
+      "window_index": 13,
+      "probability": 0.0006872357334941626
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 18,
+      "probability": 0.0006884816684760153
+    },
+    {
+      "video_name": "le2i_Lecture room_video (12)",
+      "window_index": 22,
+      "probability": 0.0006888012285344303
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g22_c02",
+      "window_index": 16,
+      "probability": 0.0006895266124047339
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g05_c02",
+      "window_index": 24,
+      "probability": 0.0006982629420235753
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g22_c02",
+      "window_index": 6,
+      "probability": 0.0006998276803642511
+    },
+    {
+      "video_name": "urfd_adl_adl-10-cam0-rgb",
+      "window_index": 10,
+      "probability": 0.0007010305998846889
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g05_c02",
+      "window_index": 22,
+      "probability": 0.000706661434378475
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g13_c03",
+      "window_index": 4,
+      "probability": 0.0007096921326592565
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g03_c01",
+      "window_index": 3,
+      "probability": 0.0007177928346209228
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g21_c02",
+      "window_index": 1,
+      "probability": 0.0007277110707946122
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g22_c02",
+      "window_index": 2,
+      "probability": 0.0007323643076233566
+    },
+    {
+      "video_name": "urfd_adl_adl-31-cam0-rgb",
+      "window_index": 5,
+      "probability": 0.0007369391387328506
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g15_c03",
+      "window_index": 2,
+      "probability": 0.0007389031816273928
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 10,
+      "probability": 0.0007471145363524556
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c03",
+      "window_index": 2,
+      "probability": 0.0007506649708375335
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g05_c04",
+      "window_index": 15,
+      "probability": 0.0007669933256693184
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (1)",
+      "window_index": 2,
+      "probability": 0.0007696847314946353
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g11_c01",
+      "window_index": 1,
+      "probability": 0.0007706851465627551
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g10_c01",
+      "window_index": 12,
+      "probability": 0.0007707230979576707
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g08_c02",
+      "window_index": 24,
+      "probability": 0.0007712572114542127
+    },
+    {
+      "video_name": "urfd_adl_adl-01-cam0-rgb",
+      "window_index": 5,
+      "probability": 0.0007771111559122801
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g04_c03",
+      "window_index": 17,
+      "probability": 0.0007809587987139821
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g09_c03",
+      "window_index": 3,
+      "probability": 0.0007811090908944607
+    },
+    {
+      "video_name": "le2i_Office_video (6)",
+      "window_index": 31,
+      "probability": 0.0007834972930140793
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g21_c01",
+      "window_index": 0,
+      "probability": 0.0007873938302509487
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 128,
+      "probability": 0.0007886036182753742
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c04",
+      "window_index": 2,
+      "probability": 0.0007901117205619812
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g15_c03",
+      "window_index": 0,
+      "probability": 0.0007909572450444102
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (12)",
+      "window_index": 6,
+      "probability": 0.0007961275987327099
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g08_c04",
+      "window_index": 18,
+      "probability": 0.0007982962415553629
+    },
+    {
+      "video_name": "le2i_Lecture room_video (13)",
+      "window_index": 38,
+      "probability": 0.000813433260191232
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 11,
+      "probability": 0.0008179983124136925
+    },
+    {
+      "video_name": "le2i_Lecture room_video (14)",
+      "window_index": 21,
+      "probability": 0.000822563364636153
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 125,
+      "probability": 0.0008287231903523207
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g22_c02",
+      "window_index": 4,
+      "probability": 0.0008328544208779931
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (68)",
+      "window_index": 81,
+      "probability": 0.0008438703953288496
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c06",
+      "window_index": 17,
+      "probability": 0.0008450569002889097
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (39)",
+      "window_index": 6,
+      "probability": 0.0008742135250940919
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g21_c02",
+      "window_index": 0,
+      "probability": 0.0008774510934017599
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g10_c02",
+      "window_index": 1,
+      "probability": 0.0008780306670814753
+    },
+    {
+      "video_name": "le2i_Office_video (4)",
+      "window_index": 8,
+      "probability": 0.0008821397204883397
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g21_c01",
+      "window_index": 1,
+      "probability": 0.0008971902425400913
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g17_c02",
+      "window_index": 9,
+      "probability": 0.0008976514800451696
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (68)",
+      "window_index": 0,
+      "probability": 0.0009061861201189458
+    },
+    {
+      "video_name": "le2i_Lecture room_video (21)",
+      "window_index": 89,
+      "probability": 0.0009162438800558448
+    },
+    {
+      "video_name": "urfd_adl_adl-31-cam0-rgb",
+      "window_index": 7,
+      "probability": 0.0009182700887322426
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g12_c04",
+      "window_index": 0,
+      "probability": 0.0009254312608391047
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c07",
+      "window_index": 14,
+      "probability": 0.0009511446114629507
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g21_c01",
+      "window_index": 5,
+      "probability": 0.0009573149727657437
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 13,
+      "probability": 0.0009585432708263397
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g05_c02",
+      "window_index": 4,
+      "probability": 0.0009613430011086166
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 1,
+      "probability": 0.0009639987838454545
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g05_c04",
+      "window_index": 13,
+      "probability": 0.0009755461360327899
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g13_c01",
+      "window_index": 4,
+      "probability": 0.0009899437427520752
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g13_c04",
+      "window_index": 15,
+      "probability": 0.0009960177121683955
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c02",
+      "window_index": 2,
+      "probability": 0.0009960941970348358
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g22_c02",
+      "window_index": 3,
+      "probability": 0.0010091055883094668
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 12,
+      "probability": 0.0010128860594704747
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (27)",
+      "window_index": 0,
+      "probability": 0.0010145060950890183
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g17_c01",
+      "window_index": 2,
+      "probability": 0.0010172728216275573
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g08_c01",
+      "window_index": 5,
+      "probability": 0.001023756223730743
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g22_c02",
+      "window_index": 24,
+      "probability": 0.0010329008800908923
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g13_c06",
+      "window_index": 16,
+      "probability": 0.0010358779691159725
+    },
+    {
+      "video_name": "urfd_adl_adl-10-cam0-rgb",
+      "window_index": 4,
+      "probability": 0.0010389022063463926
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g04_c03",
+      "window_index": 16,
+      "probability": 0.0010393045376986265
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g05_c01",
+      "window_index": 20,
+      "probability": 0.0010524641256779432
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g13_c01",
+      "window_index": 0,
+      "probability": 0.0010605124989524484
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g21_c04",
+      "window_index": 21,
+      "probability": 0.0010629877215251327
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g15_c02",
+      "window_index": 5,
+      "probability": 0.0010653699282556772
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (19)",
+      "window_index": 17,
+      "probability": 0.0010664038127288222
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g06_c02",
+      "window_index": 9,
+      "probability": 0.001074928673915565
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c04",
+      "window_index": 18,
+      "probability": 0.0010767026105895638
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g10_c01",
+      "window_index": 2,
+      "probability": 0.0010793146211653948
+    },
+    {
+      "video_name": "le2i_Office_video (33)",
+      "window_index": 0,
+      "probability": 0.0010980382794514298
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g09_c01",
+      "window_index": 15,
+      "probability": 0.001099749468266964
+    },
+    {
+      "video_name": "le2i_Lecture room_video (13)",
+      "window_index": 34,
+      "probability": 0.0011069267056882381
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (30)",
+      "window_index": 11,
+      "probability": 0.0011084608267992735
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (68)",
+      "window_index": 82,
+      "probability": 0.001119835302233696
+    },
+    {
+      "video_name": "urfd_adl_adl-30-cam0-rgb",
+      "window_index": 22,
+      "probability": 0.0011306664673611522
+    },
+    {
+      "video_name": "urfd_adl_adl-28-cam0-rgb",
+      "window_index": 0,
+      "probability": 0.0011360832722857594
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g15_c04",
+      "window_index": 0,
+      "probability": 0.001154373399913311
+    },
+    {
+      "video_name": "le2i_Office_video (29)",
+      "window_index": 75,
+      "probability": 0.0011675723362714052
+    },
+    {
+      "video_name": "le2i_Office_video (29)",
+      "window_index": 97,
+      "probability": 0.00116790144238621
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g21_c03",
+      "window_index": 9,
+      "probability": 0.0011714587453752756
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 126,
+      "probability": 0.001193601405248046
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g08_c02",
+      "window_index": 3,
+      "probability": 0.001208490808494389
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g08_c02",
+      "window_index": 4,
+      "probability": 0.0012170147383585572
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g03_c03",
+      "window_index": 2,
+      "probability": 0.001219793688505888
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g06_c02",
+      "window_index": 10,
+      "probability": 0.0012206172104924917
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (18)",
+      "window_index": 17,
+      "probability": 0.0012239497154951096
+    },
+    {
+      "video_name": "urfd_adl_adl-08-cam0-rgb",
+      "window_index": 7,
+      "probability": 0.0012280949158594012
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (12)",
+      "window_index": 5,
+      "probability": 0.0012347865849733353
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g13_c02",
+      "window_index": 0,
+      "probability": 0.0012397397076711059
+    },
+    {
+      "video_name": "le2i_Lecture room_video (21)",
+      "window_index": 91,
+      "probability": 0.0012493164977058768
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c03",
+      "window_index": 4,
+      "probability": 0.0012523484183475375
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g08_c02",
+      "window_index": 5,
+      "probability": 0.0012612653663381934
+    },
+    {
+      "video_name": "le2i_Lecture room_video (18)",
+      "window_index": 70,
+      "probability": 0.0013038364704698324
+    },
+    {
+      "video_name": "urfd_adl_adl-04-cam0-rgb",
+      "window_index": 5,
+      "probability": 0.0013236146187409759
+    },
+    {
+      "video_name": "urfd_adl_adl-09-cam0-rgb",
+      "window_index": 7,
+      "probability": 0.0013311683433130383
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g10_c02",
+      "window_index": 4,
+      "probability": 0.0013374404516071081
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g08_c02",
+      "window_index": 3,
+      "probability": 0.0013460505288094282
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g04_c03",
+      "window_index": 22,
+      "probability": 0.001364432042464614
+    },
+    {
+      "video_name": "urfd_adl_adl-32-cam0-rgb",
+      "window_index": 7,
+      "probability": 0.0013798137661069632
+    },
+    {
+      "video_name": "le2i_Lecture room_video (2)",
+      "window_index": 45,
+      "probability": 0.0013945740647614002
+    },
+    {
+      "video_name": "urfd_adl_adl-09-cam0-rgb",
+      "window_index": 4,
+      "probability": 0.0013972341548651457
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 124,
+      "probability": 0.0014544929144904017
+    },
+    {
+      "video_name": "le2i_Lecture room_video (3)",
+      "window_index": 34,
+      "probability": 0.0014670463278889656
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g03_c04",
+      "window_index": 9,
+      "probability": 0.00147248397115618
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g15_c03",
+      "window_index": 1,
+      "probability": 0.0014747121604159474
+    },
+    {
+      "video_name": "le2i_Lecture room_video (14)",
+      "window_index": 23,
+      "probability": 0.001509095192886889
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g05_c02",
+      "window_index": 21,
+      "probability": 0.00152387039270252
+    },
+    {
+      "video_name": "le2i_Office_video (6)",
+      "window_index": 9,
+      "probability": 0.0015298461075872183
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g05_c03",
+      "window_index": 7,
+      "probability": 0.0015462767332792282
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g06_c02",
+      "window_index": 12,
+      "probability": 0.00155975844245404
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g15_c03",
+      "window_index": 6,
+      "probability": 0.0015614675357937813
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g10_c02",
+      "window_index": 7,
+      "probability": 0.0015706515405327082
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c04",
+      "window_index": 7,
+      "probability": 0.001571606146171689
+    },
+    {
+      "video_name": "urfd_adl_adl-30-cam0-rgb",
+      "window_index": 15,
+      "probability": 0.001593035995028913
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c06",
+      "window_index": 15,
+      "probability": 0.0015987071674317122
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g04_c03",
+      "window_index": 14,
+      "probability": 0.0016133964527398348
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 104,
+      "probability": 0.001638453104533255
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g06_c02",
+      "window_index": 14,
+      "probability": 0.001686197123490274
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g05_c03",
+      "window_index": 6,
+      "probability": 0.0017231414094567299
+    },
+    {
+      "video_name": "le2i_Lecture room_video (13)",
+      "window_index": 35,
+      "probability": 0.0017556975362822413
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g13_c01",
+      "window_index": 4,
+      "probability": 0.0017750307451933622
+    },
+    {
+      "video_name": "urfd_adl_adl-31-cam0-rgb",
+      "window_index": 19,
+      "probability": 0.0017881154781207442
+    },
+    {
+      "video_name": "le2i_Office_video (13)",
+      "window_index": 56,
+      "probability": 0.001803349587135017
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g09_c06",
+      "window_index": 3,
+      "probability": 0.0018054167740046978
+    },
+    {
+      "video_name": "urfd_adl_adl-05-cam0-rgb",
+      "window_index": 4,
+      "probability": 0.0018572404514998198
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 110,
+      "probability": 0.0018956202547997236
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 123,
+      "probability": 0.0019204618874937296
+    },
+    {
+      "video_name": "le2i_Office_video (19)",
+      "window_index": 17,
+      "probability": 0.0019269307376816869
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c04",
+      "window_index": 19,
+      "probability": 0.001942518982104957
+    },
+    {
+      "video_name": "urfd_adl_adl-09-cam0-rgb",
+      "window_index": 3,
+      "probability": 0.0019593259785324335
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g06_c02",
+      "window_index": 11,
+      "probability": 0.0019693549256771803
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g05_c02",
+      "window_index": 8,
+      "probability": 0.0019729759078472853
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g05_c04",
+      "window_index": 8,
+      "probability": 0.0020115941297262907
+    },
+    {
+      "video_name": "le2i_Lecture room_video (3)",
+      "window_index": 33,
+      "probability": 0.002043741522356868
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g10_c01",
+      "window_index": 5,
+      "probability": 0.0020482041873037815
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g02_c04",
+      "window_index": 7,
+      "probability": 0.002081284997984767
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g22_c02",
+      "window_index": 15,
+      "probability": 0.002163367811590433
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g21_c04",
+      "window_index": 9,
+      "probability": 0.0021665110252797604
+    },
+    {
+      "video_name": "urfd_adl_adl-08-cam0-rgb",
+      "window_index": 5,
+      "probability": 0.002203763462603092
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c01",
+      "window_index": 2,
+      "probability": 0.002282299567013979
+    },
+    {
+      "video_name": "urfd_adl_adl-02-cam0-rgb",
+      "window_index": 12,
+      "probability": 0.0023430793080478907
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (10)",
+      "window_index": 8,
+      "probability": 0.002351050963625312
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g09_c06",
+      "window_index": 5,
+      "probability": 0.002375704003497958
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (12)",
+      "window_index": 12,
+      "probability": 0.0023877318017184734
+    },
+    {
+      "video_name": "urfd_adl_adl-02-cam0-rgb",
+      "window_index": 8,
+      "probability": 0.0023888361174613237
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g12_c04",
+      "window_index": 16,
+      "probability": 0.0024057638365775347
+    },
+    {
+      "video_name": "le2i_Home_02_video (31)",
+      "window_index": 6,
+      "probability": 0.0025023797061294317
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g15_c04",
+      "window_index": 4,
+      "probability": 0.0025368963833898306
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g09_c06",
+      "window_index": 4,
+      "probability": 0.0025556765031069517
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (4)",
+      "window_index": 15,
+      "probability": 0.0025844399351626635
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g22_c02",
+      "window_index": 14,
+      "probability": 0.0025968400295823812
+    },
+    {
+      "video_name": "le2i_Lecture room_video (21)",
+      "window_index": 90,
+      "probability": 0.002625315450131893
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (50)",
+      "window_index": 54,
+      "probability": 0.002688089618459344
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 103,
+      "probability": 0.00270654633641243
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g15_c04",
+      "window_index": 4,
+      "probability": 0.0027307686395943165
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g12_c04",
+      "window_index": 1,
+      "probability": 0.0027318757493048906
+    },
+    {
+      "video_name": "urfd_adl_adl-01-cam0-rgb",
+      "window_index": 4,
+      "probability": 0.0027420141268521547
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g07_c04",
+      "window_index": 2,
+      "probability": 0.0028156619518995285
+    },
+    {
+      "video_name": "le2i_Lecture room_video (14)",
+      "window_index": 24,
+      "probability": 0.0028419767040759325
+    },
+    {
+      "video_name": "urfd_adl_adl-32-cam0-rgb",
+      "window_index": 6,
+      "probability": 0.0028990122955292463
+    },
+    {
+      "video_name": "urfd_adl_adl-07-cam0-rgb",
+      "window_index": 4,
+      "probability": 0.0029265182092785835
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g19_c01",
+      "window_index": 4,
+      "probability": 0.00297917309217155
+    },
+    {
+      "video_name": "urfd_adl_adl-02-cam0-rgb",
+      "window_index": 7,
+      "probability": 0.003073720494285226
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (12)",
+      "window_index": 15,
+      "probability": 0.003150379750877619
+    },
+    {
+      "video_name": "urfd_adl_adl-10-cam0-rgb",
+      "window_index": 1,
+      "probability": 0.0033071995712816715
+    },
+    {
+      "video_name": "urfd_adl_adl-06-cam0-rgb",
+      "window_index": 11,
+      "probability": 0.0035995880607515574
+    },
+    {
+      "video_name": "urfd_adl_adl-02-cam0-rgb",
+      "window_index": 9,
+      "probability": 0.00367154972627759
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c05",
+      "window_index": 13,
+      "probability": 0.0038941644597798586
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g05_c04",
+      "window_index": 14,
+      "probability": 0.003951564896851778
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g04_c03",
+      "window_index": 12,
+      "probability": 0.00395728275179863
+    },
+    {
+      "video_name": "urfd_adl_adl-26-cam0-rgb",
+      "window_index": 1,
+      "probability": 0.0039748516865074635
+    },
+    {
+      "video_name": "urfd_adl_adl-11-cam0-rgb",
+      "window_index": 6,
+      "probability": 0.0040721832774579525
+    },
+    {
+      "video_name": "urfd_adl_adl-09-cam0-rgb",
+      "window_index": 2,
+      "probability": 0.0040902006439864635
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g16_c02",
+      "window_index": 0,
+      "probability": 0.004238726571202278
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g06_c02",
+      "window_index": 13,
+      "probability": 0.00428419467061758
+    },
+    {
+      "video_name": "urfd_adl_adl-06-cam0-rgb",
+      "window_index": 5,
+      "probability": 0.004445001482963562
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 120,
+      "probability": 0.004534060135483742
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g12_c02",
+      "window_index": 0,
+      "probability": 0.004640570841729641
+    },
+    {
+      "video_name": "urfd_adl_adl-03-cam0-rgb",
+      "window_index": 3,
+      "probability": 0.0048157148994505405
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g05_c02",
+      "window_index": 14,
+      "probability": 0.005009879358112812
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g05_c02",
+      "window_index": 9,
+      "probability": 0.005044647492468357
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g04_c03",
+      "window_index": 13,
+      "probability": 0.005049379542469978
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 16,
+      "probability": 0.0051582083106040955
+    },
+    {
+      "video_name": "le2i_Office_video (28)",
+      "window_index": 0,
+      "probability": 0.005335329100489616
+    },
+    {
+      "video_name": "le2i_Lecture room_video (12)",
+      "window_index": 20,
+      "probability": 0.005352949723601341
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (10)",
+      "window_index": 32,
+      "probability": 0.005379288922995329
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g12_c04",
+      "window_index": 2,
+      "probability": 0.005574455484747887
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c03",
+      "window_index": 21,
+      "probability": 0.005798069294542074
+    },
+    {
+      "video_name": "le2i_Office_video (4)",
+      "window_index": 9,
+      "probability": 0.005804339423775673
+    },
+    {
+      "video_name": "le2i_Lecture room_video (16)",
+      "window_index": 11,
+      "probability": 0.0059380787424743176
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g12_c01",
+      "window_index": 11,
+      "probability": 0.006026534363627434
+    },
+    {
+      "video_name": "urfd_adl_adl-01-cam0-rgb",
+      "window_index": 6,
+      "probability": 0.0061163343489170074
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c01",
+      "window_index": 1,
+      "probability": 0.006632183212786913
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (12)",
+      "window_index": 14,
+      "probability": 0.007092536427080631
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 122,
+      "probability": 0.007119674701243639
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 119,
+      "probability": 0.00752549571916461
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 121,
+      "probability": 0.0077690244652330875
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g13_c04",
+      "window_index": 16,
+      "probability": 0.007945222780108452
+    },
+    {
+      "video_name": "le2i_Lecture room_video (27)",
+      "window_index": 5,
+      "probability": 0.00804872252047062
+    },
+    {
+      "video_name": "urfd_adl_adl-04-cam0-rgb",
+      "window_index": 12,
+      "probability": 0.008066950365900993
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g21_c05",
+      "window_index": 17,
+      "probability": 0.008067653514444828
+    },
+    {
+      "video_name": "urfd_adl_adl-31-cam0-rgb",
+      "window_index": 14,
+      "probability": 0.008194206282496452
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g20_c03",
+      "window_index": 9,
+      "probability": 0.008503921329975128
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (57)",
+      "window_index": 17,
+      "probability": 0.008584919385612011
+    },
+    {
+      "video_name": "le2i_Office_video (4)",
+      "window_index": 12,
+      "probability": 0.008614092133939266
+    },
+    {
+      "video_name": "urfd_adl_adl-05-cam0-rgb",
+      "window_index": 3,
+      "probability": 0.008768739178776741
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g16_c02",
+      "window_index": 3,
+      "probability": 0.00910822581499815
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g16_c02",
+      "window_index": 4,
+      "probability": 0.009575946256518364
+    },
+    {
+      "video_name": "urfd_adl_adl-32-cam0-rgb",
+      "window_index": 8,
+      "probability": 0.009579803794622421
+    },
+    {
+      "video_name": "le2i_Lecture room_video (26)",
+      "window_index": 135,
+      "probability": 0.01043328270316124
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g15_c04",
+      "window_index": 5,
+      "probability": 0.010750864632427692
+    },
+    {
+      "video_name": "le2i_Office_video (4)",
+      "window_index": 11,
+      "probability": 0.010959377512335777
+    },
+    {
+      "video_name": "le2i_Lecture room_video (19)",
+      "window_index": 45,
+      "probability": 0.01120174489915371
+    },
+    {
+      "video_name": "urfd_adl_adl-10-cam0-rgb",
+      "window_index": 2,
+      "probability": 0.011232986114919186
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g16_c02",
+      "window_index": 1,
+      "probability": 0.011314941570162773
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g12_c02",
+      "window_index": 4,
+      "probability": 0.014415007084608078
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g19_c01",
+      "window_index": 5,
+      "probability": 0.014685152098536491
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g05_c01",
+      "window_index": 19,
+      "probability": 0.015189369209110737
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g19_c06",
+      "window_index": 16,
+      "probability": 0.016583673655986786
+    },
+    {
+      "video_name": "urfd_adl_adl-24-cam0-rgb",
+      "window_index": 0,
+      "probability": 0.019754663109779358
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g12_c02",
+      "window_index": 2,
+      "probability": 0.019756775349378586
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (12)",
+      "window_index": 13,
+      "probability": 0.020920995622873306
+    },
+    {
+      "video_name": "urfd_adl_adl-11-cam0-rgb",
+      "window_index": 5,
+      "probability": 0.021392401307821274
+    },
+    {
+      "video_name": "ucf101_BodyWeightSquats_v_BodyWeightSquats_g20_c05",
+      "window_index": 5,
+      "probability": 0.0224933885037899
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (19)",
+      "window_index": 18,
+      "probability": 0.024564580991864204
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (10)",
+      "window_index": 31,
+      "probability": 0.027985431253910065
+    },
+    {
+      "video_name": "urfd_adl_adl-02-cam0-rgb",
+      "window_index": 11,
+      "probability": 0.02885531261563301
+    },
+    {
+      "video_name": "urfd_adl_adl-06-cam0-rgb",
+      "window_index": 10,
+      "probability": 0.0305510014295578
+    },
+    {
+      "video_name": "urfd_adl_adl-32-cam0-rgb",
+      "window_index": 4,
+      "probability": 0.03772455453872681
+    },
+    {
+      "video_name": "urfd_adl_adl-08-cam0-rgb",
+      "window_index": 6,
+      "probability": 0.040807001292705536
+    },
+    {
+      "video_name": "ucf101_PushUps_v_PushUps_g07_c04",
+      "window_index": 3,
+      "probability": 0.04457292705774307
+    },
+    {
+      "video_name": "urfd_adl_adl-10-cam0-rgb",
+      "window_index": 9,
+      "probability": 0.04485180601477623
+    },
+    {
+      "video_name": "urfd_adl_adl-10-cam0-rgb",
+      "window_index": 3,
+      "probability": 0.04856749251484871
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (19)",
+      "window_index": 16,
+      "probability": 0.050939012318849564
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g04_c03",
+      "window_index": 23,
+      "probability": 0.05105884373188019
+    },
+    {
+      "video_name": "le2i_Lecture room_video (12)",
+      "window_index": 60,
+      "probability": 0.052582476288080215
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (10)",
+      "window_index": 30,
+      "probability": 0.054163187742233276
+    },
+    {
+      "video_name": "le2i_Office_video (6)",
+      "window_index": 10,
+      "probability": 0.05657545104622841
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (34)",
+      "window_index": 33,
+      "probability": 0.05783665552735329
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 108,
+      "probability": 0.10225879400968552
+    },
+    {
+      "video_name": "urfd_adl_adl-32-cam0-rgb",
+      "window_index": 5,
+      "probability": 0.10811170935630798
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 113,
+      "probability": 0.1113075315952301
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g07_c03",
+      "window_index": 14,
+      "probability": 0.11467233300209045
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 111,
+      "probability": 0.117033950984478
+    },
+    {
+      "video_name": "le2i_Lecture room_video (26)",
+      "window_index": 81,
+      "probability": 0.11724282801151276
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 101,
+      "probability": 0.13333667814731598
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (18)",
+      "window_index": 23,
+      "probability": 0.14064152538776398
+    },
+    {
+      "video_name": "le2i_Office_video (29)",
+      "window_index": 115,
+      "probability": 0.19179093837738037
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g19_c01",
+      "window_index": 6,
+      "probability": 0.2207203209400177
+    },
+    {
+      "video_name": "le2i_Lecture room_video (12)",
+      "window_index": 61,
+      "probability": 0.2247675657272339
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (34)",
+      "window_index": 35,
+      "probability": 0.284882515668869
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g12_c02",
+      "window_index": 3,
+      "probability": 0.2897087037563324
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g19_c01",
+      "window_index": 8,
+      "probability": 0.3083665668964386
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g05_c02",
+      "window_index": 13,
+      "probability": 0.3086596429347992
+    },
+    {
+      "video_name": "urfd_adl_adl-04-cam0-rgb",
+      "window_index": 2,
+      "probability": 0.3144865930080414
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (10)",
+      "window_index": 33,
+      "probability": 0.5016148090362549
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g05_c02",
+      "window_index": 15,
+      "probability": 0.7248644828796387
+    },
+    {
+      "video_name": "urfd_adl_adl-06-cam0-rgb",
+      "window_index": 7,
+      "probability": 0.7780189514160156
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (18)",
+      "window_index": 19,
+      "probability": 0.8097537755966187
+    },
+    {
+      "video_name": "le2i_Lecture room_video (26)",
+      "window_index": 73,
+      "probability": 0.8398199081420898
+    },
+    {
+      "video_name": "urfd_adl_adl-04-cam0-rgb",
+      "window_index": 11,
+      "probability": 0.9177861213684082
+    },
+    {
+      "video_name": "urfd_adl_adl-06-cam0-rgb",
+      "window_index": 6,
+      "probability": 0.9208821058273315
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (10)",
+      "window_index": 29,
+      "probability": 0.9334551692008972
+    },
+    {
+      "video_name": "le2i_Office_video (6)",
+      "window_index": 25,
+      "probability": 0.958770751953125
+    },
+    {
+      "video_name": "le2i_Office_video (6)",
+      "window_index": 24,
+      "probability": 0.9625269174575806
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (56)",
+      "window_index": 36,
+      "probability": 0.9635968804359436
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (61)",
+      "window_index": 112,
+      "probability": 0.9642894268035889
+    },
+    {
+      "video_name": "urfd_adl_adl-06-cam0-rgb",
+      "window_index": 9,
+      "probability": 0.9645133018493652
+    },
+    {
+      "video_name": "urfd_adl_adl-06-cam0-rgb",
+      "window_index": 8,
+      "probability": 0.9661240577697754
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (56)",
+      "window_index": 38,
+      "probability": 0.9723700284957886
+    },
+    {
+      "video_name": "ucf101_ApplyEyeMakeup_v_ApplyEyeMakeup_g19_c01",
+      "window_index": 7,
+      "probability": 0.9756913781166077
+    },
+    {
+      "video_name": "urfd_adl_adl-04-cam0-rgb",
+      "window_index": 3,
+      "probability": 0.9796442985534668
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (56)",
+      "window_index": 32,
+      "probability": 0.9889628887176514
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (56)",
+      "window_index": 35,
+      "probability": 0.9905348420143127
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (10)",
+      "window_index": 28,
+      "probability": 0.9931628108024597
+    },
+    {
+      "video_name": "le2i_Lecture room_video (12)",
+      "window_index": 62,
+      "probability": 0.9956890344619751
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (56)",
+      "window_index": 37,
+      "probability": 0.9967048168182373
+    },
+    {
+      "video_name": "urfd_adl_adl-26-cam0-rgb",
+      "window_index": 0,
+      "probability": 0.9973235130310059
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (56)",
+      "window_index": 34,
+      "probability": 0.9982149004936218
+    },
+    {
+      "video_name": "le2i_Office_video (6)",
+      "window_index": 32,
+      "probability": 0.998677670955658
+    },
+    {
+      "video_name": "le2i_Coffee_room_02_video (56)",
+      "window_index": 33,
+      "probability": 0.9993302226066589
+    },
+    {
+      "video_name": "le2i_Lecture room_video (12)",
+      "window_index": 38,
+      "probability": 0.999593198299408
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (10)",
+      "window_index": 27,
+      "probability": 0.9996652007102966
+    },
+    {
+      "video_name": "ucf101_Lunges_v_Lunges_g21_c04",
+      "window_index": 22,
+      "probability": 0.9996960759162903
+    },
+    {
+      "video_name": "ucf101_MoppingFloor_v_MoppingFloor_g05_c02",
+      "window_index": 16,
+      "probability": 0.9997497797012329
+    },
+    {
+      "video_name": "le2i_Lecture room_video (12)",
+      "window_index": 59,
+      "probability": 0.9997596144676208
+    },
+    {
+      "video_name": "le2i_Lecture room_video (12)",
+      "window_index": 64,
+      "probability": 0.9998046159744263
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (18)",
+      "window_index": 22,
+      "probability": 0.9998504519462585
+    },
+    {
+      "video_name": "le2i_Lecture room_video (12)",
+      "window_index": 63,
+      "probability": 0.9998632669448853
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (10)",
+      "window_index": 22,
+      "probability": 0.9998927116394043
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (34)",
+      "window_index": 36,
+      "probability": 0.9998975396156311
+    },
+    {
+      "video_name": "le2i_Office_video (6)",
+      "window_index": 11,
+      "probability": 0.9999157190322876
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (34)",
+      "window_index": 38,
+      "probability": 0.9999350905418396
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (34)",
+      "window_index": 37,
+      "probability": 0.9999460577964783
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (10)",
+      "window_index": 24,
+      "probability": 0.9999514222145081
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (10)",
+      "window_index": 25,
+      "probability": 0.9999629855155945
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (10)",
+      "window_index": 26,
+      "probability": 0.9999675154685974
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (18)",
+      "window_index": 21,
+      "probability": 0.9999683499336243
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (10)",
+      "window_index": 23,
+      "probability": 0.999979555606842
+    },
+    {
+      "video_name": "le2i_Coffee_room_01_video (18)",
+      "window_index": 20,
+      "probability": 0.9999834895133972
+    }
+  ]
+}
