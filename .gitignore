@@ -207,11 +207,21 @@ marimo/_lsp/
 __marimo__/
 
 # Project-specific: Data files
-# Exclude all data files (videos, images, processed data)
-data/raw/
+# Exclude large datasets (stored on Google Drive)
+data/raw/urfd/
+data/raw/le2i/
+data/raw/ucf101_subset/
 data/interim/
 data/processed/
 data/external/
+data/test/*.mp4
+data/test/*.avi
+
+# Keep these in GitHub:
+!data/raw/README.md
+!data/raw/*/README.md
+!data/test/README.md
+!data/test_results/
 
 # macOS
 .DS_Store
