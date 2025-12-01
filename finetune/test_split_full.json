@@ -1,0 +1,1274 @@
+[
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-17-cam0-rgb_frame_0000.jpg",
+    "video":"fall-17-cam0-rgb",
+    "frame_idx":0,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-17-cam0-rgb_frame_0031.jpg",
+    "video":"fall-17-cam0-rgb",
+    "frame_idx":31,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-17-cam0-rgb_frame_0063.jpg",
+    "video":"fall-17-cam0-rgb",
+    "frame_idx":63,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-01-cam0-rgb_frame_0000.jpg",
+    "video":"fall-01-cam0-rgb",
+    "frame_idx":0,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-01-cam0-rgb_frame_0053.jpg",
+    "video":"fall-01-cam0-rgb",
+    "frame_idx":53,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-01-cam0-rgb_frame_0106.jpg",
+    "video":"fall-01-cam0-rgb",
+    "frame_idx":106,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-18-cam0-rgb_frame_0000.jpg",
+    "video":"fall-18-cam0-rgb",
+    "frame_idx":0,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-18-cam0-rgb_frame_0021.jpg",
+    "video":"fall-18-cam0-rgb",
+    "frame_idx":21,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-18-cam0-rgb_frame_0043.jpg",
+    "video":"fall-18-cam0-rgb",
+    "frame_idx":43,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-09-cam0-rgb_frame_0000.jpg",
+    "video":"fall-09-cam0-rgb",
+    "frame_idx":0,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-09-cam0-rgb_frame_0061.jpg",
+    "video":"fall-09-cam0-rgb",
+    "frame_idx":61,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-09-cam0-rgb_frame_0123.jpg",
+    "video":"fall-09-cam0-rgb",
+    "frame_idx":123,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-21-cam0-rgb_frame_0000.jpg",
+    "video":"fall-21-cam0-rgb",
+    "frame_idx":0,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-21-cam0-rgb_frame_0018.jpg",
+    "video":"fall-21-cam0-rgb",
+    "frame_idx":18,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/fall\/fall-21-cam0-rgb_frame_0036.jpg",
+    "video":"fall-21-cam0-rgb",
+    "frame_idx":36,
+    "label":"fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"Yes, a person is falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-08-cam0-rgb_frame_0000.jpg",
+    "video":"adl-08-cam0-rgb",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-08-cam0-rgb_frame_0060.jpg",
+    "video":"adl-08-cam0-rgb",
+    "frame_idx":60,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-08-cam0-rgb_frame_0120.jpg",
+    "video":"adl-08-cam0-rgb",
+    "frame_idx":120,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-31-cam0-rgb_frame_0000.jpg",
+    "video":"adl-31-cam0-rgb",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-31-cam0-rgb_frame_0083.jpg",
+    "video":"adl-31-cam0-rgb",
+    "frame_idx":83,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-31-cam0-rgb_frame_0166.jpg",
+    "video":"adl-31-cam0-rgb",
+    "frame_idx":166,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-12-cam0-rgb_frame_0000.jpg",
+    "video":"adl-12-cam0-rgb",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-12-cam0-rgb_frame_0083.jpg",
+    "video":"adl-12-cam0-rgb",
+    "frame_idx":83,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-12-cam0-rgb_frame_0166.jpg",
+    "video":"adl-12-cam0-rgb",
+    "frame_idx":166,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-01-cam0-rgb_frame_0000.jpg",
+    "video":"adl-01-cam0-rgb",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-01-cam0-rgb_frame_0050.jpg",
+    "video":"adl-01-cam0-rgb",
+    "frame_idx":50,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-01-cam0-rgb_frame_0100.jpg",
+    "video":"adl-01-cam0-rgb",
+    "frame_idx":100,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-07-cam0-rgb_frame_0000.jpg",
+    "video":"adl-07-cam0-rgb",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-07-cam0-rgb_frame_0060.jpg",
+    "video":"adl-07-cam0-rgb",
+    "frame_idx":60,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/adl-07-cam0-rgb_frame_0120.jpg",
+    "video":"adl-07-cam0-rgb",
+    "frame_idx":120,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (3)_frame_0000.jpg",
+    "video":"video (3).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (3)_frame_0080.jpg",
+    "video":"video (3).avi",
+    "frame_idx":80,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (3)_frame_0160.jpg",
+    "video":"video (3).avi",
+    "frame_idx":160,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (5)_frame_0000.jpg",
+    "video":"video (5).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (5)_frame_0064.jpg",
+    "video":"video (5).avi",
+    "frame_idx":64,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (5)_frame_0128.jpg",
+    "video":"video (5).avi",
+    "frame_idx":128,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (8)_frame_0000.jpg",
+    "video":"video (8).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (8)_frame_0095.jpg",
+    "video":"video (8).avi",
+    "frame_idx":95,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (8)_frame_0190.jpg",
+    "video":"video (8).avi",
+    "frame_idx":190,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (3)_frame_0000.jpg",
+    "video":"video (3).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (3)_frame_0155.jpg",
+    "video":"video (3).avi",
+    "frame_idx":155,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (3)_frame_0311.jpg",
+    "video":"video (3).avi",
+    "frame_idx":311,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (5)_frame_0000.jpg",
+    "video":"video (5).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (5)_frame_0079.jpg",
+    "video":"video (5).avi",
+    "frame_idx":79,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (5)_frame_0158.jpg",
+    "video":"video (5).avi",
+    "frame_idx":158,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (8)_frame_0000.jpg",
+    "video":"video (8).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (8)_frame_0139.jpg",
+    "video":"video (8).avi",
+    "frame_idx":139,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (8)_frame_0279.jpg",
+    "video":"video (8).avi",
+    "frame_idx":279,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (41)_frame_0000.jpg",
+    "video":"video (41).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (41)_frame_0127.jpg",
+    "video":"video (41).avi",
+    "frame_idx":127,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (41)_frame_0254.jpg",
+    "video":"video (41).avi",
+    "frame_idx":254,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (36)_frame_0000.jpg",
+    "video":"video (36).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (36)_frame_0401.jpg",
+    "video":"video (36).avi",
+    "frame_idx":401,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (36)_frame_0802.jpg",
+    "video":"video (36).avi",
+    "frame_idx":802,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (46)_frame_0000.jpg",
+    "video":"video (46).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (46)_frame_0097.jpg",
+    "video":"video (46).avi",
+    "frame_idx":97,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (46)_frame_0194.jpg",
+    "video":"video (46).avi",
+    "frame_idx":194,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (3)_frame_0000.jpg",
+    "video":"video (3).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (3)_frame_0101.jpg",
+    "video":"video (3).avi",
+    "frame_idx":101,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (3)_frame_0202.jpg",
+    "video":"video (3).avi",
+    "frame_idx":202,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (45)_frame_0000.jpg",
+    "video":"video (45).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (45)_frame_0071.jpg",
+    "video":"video (45).avi",
+    "frame_idx":71,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (45)_frame_0143.jpg",
+    "video":"video (45).avi",
+    "frame_idx":143,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (42)_frame_0000.jpg",
+    "video":"video (42).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (42)_frame_0053.jpg",
+    "video":"video (42).avi",
+    "frame_idx":53,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (42)_frame_0106.jpg",
+    "video":"video (42).avi",
+    "frame_idx":106,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (5)_frame_0000.jpg",
+    "video":"video (5).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (5)_frame_0060.jpg",
+    "video":"video (5).avi",
+    "frame_idx":60,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (5)_frame_0120.jpg",
+    "video":"video (5).avi",
+    "frame_idx":120,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (43)_frame_0000.jpg",
+    "video":"video (43).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (43)_frame_0239.jpg",
+    "video":"video (43).avi",
+    "frame_idx":239,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (43)_frame_0478.jpg",
+    "video":"video (43).avi",
+    "frame_idx":478,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (34)_frame_0000.jpg",
+    "video":"video (34).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (34)_frame_0138.jpg",
+    "video":"video (34).avi",
+    "frame_idx":138,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (34)_frame_0276.jpg",
+    "video":"video (34).avi",
+    "frame_idx":276,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (8)_frame_0000.jpg",
+    "video":"video (8).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (8)_frame_0086.jpg",
+    "video":"video (8).avi",
+    "frame_idx":86,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (8)_frame_0172.jpg",
+    "video":"video (8).avi",
+    "frame_idx":172,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (3)_frame_0000.jpg",
+    "video":"video (3).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (3)_frame_0207.jpg",
+    "video":"video (3).avi",
+    "frame_idx":207,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (3)_frame_0415.jpg",
+    "video":"video (3).avi",
+    "frame_idx":415,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (5)_frame_0000.jpg",
+    "video":"video (5).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (5)_frame_0129.jpg",
+    "video":"video (5).avi",
+    "frame_idx":129,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (5)_frame_0259.jpg",
+    "video":"video (5).avi",
+    "frame_idx":259,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (8)_frame_0000.jpg",
+    "video":"video (8).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (8)_frame_0240.jpg",
+    "video":"video (8).avi",
+    "frame_idx":240,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (8)_frame_0481.jpg",
+    "video":"video (8).avi",
+    "frame_idx":481,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (41)_frame_0000.jpg",
+    "video":"video (41).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (41)_frame_0080.jpg",
+    "video":"video (41).avi",
+    "frame_idx":80,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (41)_frame_0160.jpg",
+    "video":"video (41).avi",
+    "frame_idx":160,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (36)_frame_0000.jpg",
+    "video":"video (36).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (36)_frame_0064.jpg",
+    "video":"video (36).avi",
+    "frame_idx":64,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (36)_frame_0128.jpg",
+    "video":"video (36).avi",
+    "frame_idx":128,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (46)_frame_0000.jpg",
+    "video":"video (46).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (46)_frame_0088.jpg",
+    "video":"video (46).avi",
+    "frame_idx":88,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (46)_frame_0176.jpg",
+    "video":"video (46).avi",
+    "frame_idx":176,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (49)_frame_0000.jpg",
+    "video":"video (49).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (49)_frame_0104.jpg",
+    "video":"video (49).avi",
+    "frame_idx":104,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (49)_frame_0208.jpg",
+    "video":"video (49).avi",
+    "frame_idx":208,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (45)_frame_0000.jpg",
+    "video":"video (45).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (45)_frame_0072.jpg",
+    "video":"video (45).avi",
+    "frame_idx":72,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (45)_frame_0144.jpg",
+    "video":"video (45).avi",
+    "frame_idx":144,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (42)_frame_0000.jpg",
+    "video":"video (42).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (42)_frame_0056.jpg",
+    "video":"video (42).avi",
+    "frame_idx":56,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (42)_frame_0112.jpg",
+    "video":"video (42).avi",
+    "frame_idx":112,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (43)_frame_0000.jpg",
+    "video":"video (43).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (43)_frame_0056.jpg",
+    "video":"video (43).avi",
+    "frame_idx":56,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (43)_frame_0112.jpg",
+    "video":"video (43).avi",
+    "frame_idx":112,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (34)_frame_0000.jpg",
+    "video":"video (34).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (34)_frame_0080.jpg",
+    "video":"video (34).avi",
+    "frame_idx":80,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (34)_frame_0160.jpg",
+    "video":"video (34).avi",
+    "frame_idx":160,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (67)_frame_0000.jpg",
+    "video":"video (67).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (67)_frame_0115.jpg",
+    "video":"video (67).avi",
+    "frame_idx":115,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (67)_frame_0231.jpg",
+    "video":"video (67).avi",
+    "frame_idx":231,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (68)_frame_0000.jpg",
+    "video":"video (68).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (68)_frame_0535.jpg",
+    "video":"video (68).avi",
+    "frame_idx":535,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (68)_frame_1071.jpg",
+    "video":"video (68).avi",
+    "frame_idx":1071,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (65)_frame_0000.jpg",
+    "video":"video (65).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (65)_frame_0237.jpg",
+    "video":"video (65).avi",
+    "frame_idx":237,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (65)_frame_0474.jpg",
+    "video":"video (65).avi",
+    "frame_idx":474,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (49)_frame_0000.jpg",
+    "video":"video (49).avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (49)_frame_0164.jpg",
+    "video":"video (49).avi",
+    "frame_idx":164,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/video (49)_frame_0328.jpg",
+    "video":"video (49).avi",
+    "frame_idx":328,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_JumpingJack_g04_c03_frame_0000.jpg",
+    "video":"v_JumpingJack_g04_c03.avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_JumpingJack_g04_c03_frame_0026.jpg",
+    "video":"v_JumpingJack_g04_c03.avi",
+    "frame_idx":26,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_JumpingJack_g04_c03_frame_0053.jpg",
+    "video":"v_JumpingJack_g04_c03.avi",
+    "frame_idx":53,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_JumpingJack_g19_c05_frame_0000.jpg",
+    "video":"v_JumpingJack_g19_c05.avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_JumpingJack_g19_c05_frame_0026.jpg",
+    "video":"v_JumpingJack_g19_c05.avi",
+    "frame_idx":26,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_JumpingJack_g19_c05_frame_0052.jpg",
+    "video":"v_JumpingJack_g19_c05.avi",
+    "frame_idx":52,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_JumpingJack_g02_c02_frame_0000.jpg",
+    "video":"v_JumpingJack_g02_c02.avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_JumpingJack_g02_c02_frame_0021.jpg",
+    "video":"v_JumpingJack_g02_c02.avi",
+    "frame_idx":21,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_JumpingJack_g02_c02_frame_0042.jpg",
+    "video":"v_JumpingJack_g02_c02.avi",
+    "frame_idx":42,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g07_c03_frame_0000.jpg",
+    "video":"v_PullUps_g07_c03.avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g07_c03_frame_0031.jpg",
+    "video":"v_PullUps_g07_c03.avi",
+    "frame_idx":31,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g07_c03_frame_0062.jpg",
+    "video":"v_PullUps_g07_c03.avi",
+    "frame_idx":62,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g15_c01_frame_0000.jpg",
+    "video":"v_PullUps_g15_c01.avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g15_c01_frame_0055.jpg",
+    "video":"v_PullUps_g15_c01.avi",
+    "frame_idx":55,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g15_c01_frame_0110.jpg",
+    "video":"v_PullUps_g15_c01.avi",
+    "frame_idx":110,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g14_c04_frame_0000.jpg",
+    "video":"v_PullUps_g14_c04.avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g14_c04_frame_0028.jpg",
+    "video":"v_PullUps_g14_c04.avi",
+    "frame_idx":28,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g14_c04_frame_0057.jpg",
+    "video":"v_PullUps_g14_c04.avi",
+    "frame_idx":57,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g23_c01_frame_0000.jpg",
+    "video":"v_PullUps_g23_c01.avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g23_c01_frame_0059.jpg",
+    "video":"v_PullUps_g23_c01.avi",
+    "frame_idx":59,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g23_c01_frame_0118.jpg",
+    "video":"v_PullUps_g23_c01.avi",
+    "frame_idx":118,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g15_c03_frame_0000.jpg",
+    "video":"v_PullUps_g15_c03.avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g15_c03_frame_0069.jpg",
+    "video":"v_PullUps_g15_c03.avi",
+    "frame_idx":69,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g15_c03_frame_0138.jpg",
+    "video":"v_PullUps_g15_c03.avi",
+    "frame_idx":138,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g14_c02_frame_0000.jpg",
+    "video":"v_PullUps_g14_c02.avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g14_c02_frame_0027.jpg",
+    "video":"v_PullUps_g14_c02.avi",
+    "frame_idx":27,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g14_c02_frame_0054.jpg",
+    "video":"v_PullUps_g14_c02.avi",
+    "frame_idx":54,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g18_c03_frame_0000.jpg",
+    "video":"v_PullUps_g18_c03.avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g18_c03_frame_0053.jpg",
+    "video":"v_PullUps_g18_c03.avi",
+    "frame_idx":53,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g18_c03_frame_0107.jpg",
+    "video":"v_PullUps_g18_c03.avi",
+    "frame_idx":107,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g18_c04_frame_0000.jpg",
+    "video":"v_PullUps_g18_c04.avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g18_c04_frame_0054.jpg",
+    "video":"v_PullUps_g18_c04.avi",
+    "frame_idx":54,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g18_c04_frame_0108.jpg",
+    "video":"v_PullUps_g18_c04.avi",
+    "frame_idx":108,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g08_c04_frame_0000.jpg",
+    "video":"v_PullUps_g08_c04.avi",
+    "frame_idx":0,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g08_c04_frame_0035.jpg",
+    "video":"v_PullUps_g08_c04.avi",
+    "frame_idx":35,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  },
+  {
+    "image_path":"finetune\/frames_full\/non_fall\/v_PullUps_g08_c04_frame_0070.jpg",
+    "video":"v_PullUps_g08_c04.avi",
+    "frame_idx":70,
+    "label":"non_fall",
+    "question":"Is there a person falling in this image?",
+    "answer":"No, the person is not falling."
+  }
+]
