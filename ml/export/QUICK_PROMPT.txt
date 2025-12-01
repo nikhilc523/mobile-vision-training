@@ -1,0 +1,61 @@
+===== COPY THIS TO AUGMENT IN ANDROID STUDIO =====
+
+I need help implementing a fall detection TFLite model in Android. I have complete documentation and a pre-trained model.
+
+📦 MODEL FILE:
+- Copy from: mobile-vision-training/ml/export/fall_detection_model.tflite (407 KB)
+- Copy to: app/src/main/assets/fall_detection_model.tflite
+
+📚 DOCUMENTATION:
+- mobile-vision-training/ml/export/README.md (complete Android guide)
+- mobile-vision-training/ml/export/TFLITE_CONVERSION_SUMMARY.md (model specs)
+- mobile-vision-training/ml/export/ANDROID_STUDIO_PROMPT.md (detailed implementation guide)
+
+🚨 CRITICAL REQUIREMENTS:
+
+1. MUST add to app/build.gradle:
+   implementation 'org.tensorflow:tensorflow-lite:2.14.0'
+   implementation 'org.tensorflow:tensorflow-lite-select-tf-ops:2.14.0'  // REQUIRED!
+
+2. MUST use Flex delegate:
+   val flexDelegate = FlexDelegate()
+   val options = Interpreter.Options()
+   options.addDelegate(flexDelegate)
+   interpreter = Interpreter(modelFile, options)
+
+3. Input format: (1, 30, 34) float32
+   - 30 frames × 34 features (17 keypoints × 2 coords [y,x])
+   - Normalized to [0, 1]
+
+4. Output format: (1, 1) float32
+   - Probability [0, 1]
+   - Threshold: 0.85 (if > 0.85 → FALL)
+
+📋 IMPLEMENTATION TASKS:
+
+1. Update build.gradle with dependencies (including tensorflow-lite-select-tf-ops)
+2. Create FallDetector.kt class (loads model, runs inference)
+3. Create KeypointsBuffer.kt class (30-frame sliding window)
+4. Update MainActivity.kt (initialize detector, process frames, show alerts)
+5. Add UI (probability display, status, test button)
+6. Test with sample data
+
+✅ EXPECTED TEST RESULTS:
+- Normal activity: ~18% → NO FALL
+- Simulated fall: ~99% → FALL DETECTED
+- All zeros: ~0% → NO FALL
+
+⚠️ COMMON MISTAKES TO AVOID:
+- Forgetting tensorflow-lite-select-tf-ops dependency → CRASH
+- Not using Flex delegate → CRASH
+- Wrong input shape → GARBAGE OUTPUT
+- Not normalizing keypoints to [0,1] → WRONG RESULTS
+
+📖 READ FULL DOCUMENTATION:
+Please read mobile-vision-training/ml/export/ANDROID_STUDIO_PROMPT.md for complete implementation details, code examples, and specifications.
+
+🚀 START WITH:
+Step 1: Update build.gradle with correct dependencies (including Flex ops)
+
+===== END OF PROMPT =====
+

@@ -1,0 +1,410 @@
+===== COPY THIS TO AUGMENT FOR YOLO INTEGRATION =====
+
+I need to replace dummy keypoints with real YOLO11-Pose estimation for fall detection.
+
+📚 COMPLETE GUIDE:
+Read: export/YOLO_INTEGRATION_GUIDE.md
+
+🎯 TASK: Integrate YOLO11-Pose for real-time pose estimation
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1: GET YOLO MODEL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+On computer (not Android):
+
+```bash
+pip install ultralytics
+
+# Create conversion script
+cat > convert_yolo.py << 'EOF'
+from ultralytics import YOLO
+model = YOLO('yolo11n-pose.pt')
+model.export(format='tflite', imgsz=640, int8=False, nms=True)
+print("✅ Model: yolo11n-pose_saved_model/yolo11n-pose_float32.tflite")
+EOF
+
+python convert_yolo.py
+```
+
+Copy to Android:
+```bash
+cp yolo11n-pose_float32.tflite /path/to/android/app/src/main/assets/yolo11n-pose.tflite
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2: ADD DEPENDENCIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Add to app/build.gradle:
+
+```gradle
+dependencies {
+    // Existing TFLite dependencies
+    implementation 'org.tensorflow:tensorflow-lite:2.14.0'
+    implementation 'org.tensorflow:tensorflow-lite-select-tf-ops:2.14.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.14.0'
+    
+    // NEW: Add these for YOLO
+    implementation 'org.tensorflow:tensorflow-lite-support:0.4.4'
+    implementation 'org.tensorflow:tensorflow-lite-metadata:0.4.4'
+}
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3: CREATE YoloPoseEstimator CLASS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create: YoloPoseEstimator.kt
+
+Key requirements:
+
+1. Load YOLO11-Pose TFLite model from assets
+   - Model name: "yolo11n-pose.tflite"
+   - Input size: 640×640
+   - Use GPU delegate if available
+
+2. extractKeypoints(bitmap: Bitmap): FloatArray
+   - Input: Camera frame (Bitmap, any size)
+   - Output: FloatArray(34) - 17 keypoints × 2 (y, x)
+   
+3. preprocessImage(bitmap: Bitmap): ByteBuffer
+   - Resize to 640×640
+   - Normalize RGB to [0, 1]
+   - Return ByteBuffer (1, 640, 640, 3)
+
+4. parseOutput(outputBuffer: ByteBuffer): FloatArray
+   - YOLO output: (1, 56, 8400)
+   - 56 = 4 (bbox) + 1 (obj) + 1 (class) + 17×3 (keypoints)
+   - Find detection with highest confidence
+   - Extract 17 keypoints × 3 (x, y, conf)
+   - Filter by confidence > 0.3
+   - Convert to [y, x] format (NOT [x, y]!)
+   - Normalize to [0, 1]
+   - Return FloatArray(34)
+
+5. close() - Clean up interpreter and GPU delegate
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 4: UPDATE MainActivity
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4.1: Add YOLO instance
+
+```kotlin
+class MainActivity : AppCompatActivity() {
+    private lateinit var fallDetector: FallDetector
+    private lateinit var keypointsBuffer: KeypointsBuffer
+    
+    // NEW: Add YOLO
+    private lateinit var yoloPose: YoloPoseEstimator
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        
+        fallDetector = FallDetector(this)
+        keypointsBuffer = KeypointsBuffer()
+        
+        // NEW: Initialize YOLO
+        yoloPose = YoloPoseEstimator(this)
+    }
+    
+    override fun onDestroy() {
+        super.onDestroy()
+        fallDetector.close()
+        
+        // NEW: Close YOLO
+        yoloPose.close()
+    }
+}
+```
+
+4.2: Create RealKeypointAnalyzer (replace DummyKeypointAnalyzer)
+
+```kotlin
+private inner class RealKeypointAnalyzer : ImageAnalysis.Analyzer {
+    private var frameCount = 0
+    
+    override fun analyze(image: ImageProxy) {
+        try {
+            // Convert ImageProxy to Bitmap
+            val bitmap = image.toBitmap()
+            
+            // Extract real keypoints using YOLO
+            val keypoints = yoloPose.extractKeypoints(bitmap)
+            
+            // Process frame (existing method)
+            processFrame(keypoints, frameCount++)
+            
+        } catch (e: Exception) {
+            Log.e(TAG, "Error analyzing frame", e)
+        } finally {
+            image.close()
+        }
+    }
+}
+
+// Helper: Convert ImageProxy to Bitmap
+private fun ImageProxy.toBitmap(): Bitmap {
+    val buffer = planes[0].buffer
+    val bytes = ByteArray(buffer.remaining())
+    buffer.get(bytes)
+    return BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+}
+```
+
+4.3: Update startCamera() to use RealKeypointAnalyzer
+
+```kotlin
+private fun startCamera() {
+    Log.d(TAG, "Starting camera with YOLO...")
+    
+    val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+    
+    cameraProviderFuture.addListener({
+        val cameraProvider = cameraProviderFuture.get()
+        
+        val preview = Preview.Builder().build()
+        preview.setSurfaceProvider(
+            findViewById<PreviewView>(R.id.previewView).surfaceProvider
+        )
+        
+        val imageAnalyzer = ImageAnalysis.Builder()
+            .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+            .build()
+            .also {
+                it.setAnalyzer(
+                    ContextCompat.getMainExecutor(this),
+                    RealKeypointAnalyzer()  // Use YOLO instead of dummy
+                )
+            }
+        
+        val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+        
+        try {
+            cameraProvider.unbindAll()
+            cameraProvider.bindToLifecycle(
+                this,
+                cameraSelector,
+                preview,
+                imageAnalyzer
+            )
+            Log.d(TAG, "✅ Camera started with YOLO")
+        } catch (e: Exception) {
+            Log.e(TAG, "Camera binding failed", e)
+        }
+        
+    }, ContextCompat.getMainExecutor(this))
+}
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRITICAL REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️ KEYPOINT FORMAT (MUST MATCH TRAINING!)
+
+YOLO output: [x, y, conf] for each keypoint
+Training format: [y, x] for each keypoint
+
+YOU MUST SWAP x,y → y,x!
+
+Example:
+```kotlin
+// YOLO gives: x=0.5, y=0.3, conf=0.9
+// You must store: keypoints[i*2] = 0.3 (y first!)
+//                 keypoints[i*2+1] = 0.5 (x second!)
+```
+
+⚠️ NORMALIZATION
+
+All values MUST be in [0, 1] range:
+- y: 0 = top of image, 1 = bottom
+- x: 0 = left of image, 1 = right
+
+⚠️ CONFIDENCE FILTERING
+
+Only use keypoints with confidence > 0.3:
+```kotlin
+if (conf > 0.3f) {
+    keypoints[i*2] = y
+    keypoints[i*2+1] = x
+} else {
+    keypoints[i*2] = 0f
+    keypoints[i*2+1] = 0f
+}
+```
+
+⚠️ GPU DELEGATE
+
+Use GPU if available for faster inference:
+```kotlin
+val compatList = CompatibilityList()
+if (compatList.isDelegateSupportedOnThisDevice) {
+    val gpuDelegate = GpuDelegate(compatList.bestOptionsForThisDevice)
+    options.addDelegate(gpuDelegate)
+}
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+YOLO OUTPUT FORMAT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+YOLO11-Pose output shape: (1, 56, 8400)
+
+For each of 8400 detections:
+- Index 0-3: Bounding box [x, y, w, h]
+- Index 4: Object confidence
+- Index 5: Class confidence
+- Index 6-56: 17 keypoints × 3 values [x, y, conf]
+
+Keypoint order (COCO format):
+0: nose, 1: left_eye, 2: right_eye, 3: left_ear, 4: right_ear,
+5: left_shoulder, 6: right_shoulder, 7: left_elbow, 8: right_elbow,
+9: left_wrist, 10: right_wrist, 11: left_hip, 12: right_hip,
+13: left_knee, 14: right_knee, 15: left_ankle, 16: right_ankle
+
+Processing steps:
+1. Loop through 8400 detections
+2. Find detection with highest confidence
+3. Extract 17 keypoints from that detection
+4. For each keypoint:
+   - Get x, y, conf
+   - If conf > 0.3: normalize and swap to [y, x]
+   - If conf ≤ 0.3: set to [0, 0]
+5. Return FloatArray(34)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXPECTED RESULTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Build and run:
+✅ App builds successfully
+✅ No crashes
+
+Start camera:
+✅ Camera preview shows
+✅ Logs show: "✅ GPU delegate enabled"
+✅ Logs show: "✅ YOLO11-Pose model loaded successfully"
+✅ Logs show: "Input shape: [1, 640, 640, 3]"
+✅ Logs show: "Output shape: [1, 56, 8400]"
+
+When person in frame:
+✅ Logs show: "✅ Person detected (conf: 0.87)"
+✅ Logs show: "Inference time: 45ms" (or similar)
+✅ Probability updates continuously
+✅ Probability ~10-30% when standing
+
+When simulating fall:
+✅ Probability increases gradually
+✅ Alert triggers when probability > 85%
+✅ TTS says "A fall is detected"
+
+Performance:
+✅ Inference time < 100ms (preferably < 50ms with GPU)
+✅ No lag in UI
+✅ No memory leaks
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TESTING CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Setup:
+[ ] YOLO model in app/src/main/assets/yolo11n-pose.tflite
+[ ] Dependencies added to build.gradle
+[ ] YoloPoseEstimator.kt created
+[ ] RealKeypointAnalyzer created
+[ ] MainActivity updated
+
+Build:
+[ ] App builds without errors
+[ ] No missing dependencies
+
+Runtime:
+[ ] App launches successfully
+[ ] YOLO model loads
+[ ] GPU delegate enabled (if available)
+[ ] Camera preview shows
+
+Detection:
+[ ] Person detected when in frame
+[ ] Keypoints extracted (34 values)
+[ ] All values in [0, 1] range
+[ ] Coordinate order is [y, x]
+[ ] Inference time < 100ms
+
+Fall Detection:
+[ ] Probability low when standing
+[ ] Probability increases when falling
+[ ] Alert triggers correctly
+[ ] No false positives
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+COMMON MISTAKES TO AVOID
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ Wrong coordinate order [x, y] → Use [y, x]!
+❌ Not normalizing to [0, 1] → Divide by INPUT_SIZE!
+❌ Not filtering by confidence → Check conf > 0.3!
+❌ Not using GPU delegate → Slower inference!
+❌ Wrong output parsing → Follow YOLO format exactly!
+❌ Not closing resources → Memory leak!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: Model not found
+Solution: Check model is in app/src/main/assets/yolo11n-pose.tflite
+
+Problem: Slow inference (>100ms)
+Solution: Enable GPU delegate, reduce input size to 320×320
+
+Problem: No person detected
+Solution: Lower confidence threshold to 0.2, check lighting
+
+Problem: Wrong probabilities
+Solution: Verify [y, x] order, verify normalization to [0, 1]
+
+Problem: App crashes
+Solution: Check GPU delegate initialization, check output buffer size
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CODE REFERENCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+See complete implementation in:
+mobile-vision-training/ml/export/YOLO_INTEGRATION_GUIDE.md
+
+Includes:
+- Full YoloPoseEstimator class (200+ lines)
+- Complete MainActivity integration
+- Image preprocessing code
+- Output parsing logic
+- GPU delegate setup
+- Error handling
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+IMPLEMENTATION ORDER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Get YOLO model and copy to assets
+2. Add dependencies to build.gradle
+3. Create YoloPoseEstimator.kt
+4. Add YOLO instance to MainActivity
+5. Create RealKeypointAnalyzer
+6. Update startCamera() to use RealKeypointAnalyzer
+7. Build and test
+8. Verify person detection
+9. Test fall detection with real camera
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 START: Get YOLO model first, then create YoloPoseEstimator class
+
+Read the complete guide for detailed implementation:
+export/YOLO_INTEGRATION_GUIDE.md
+
+===== END OF PROMPT =====
+

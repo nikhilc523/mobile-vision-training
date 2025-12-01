@@ -1,0 +1,34 @@
+{
+  "model_version": "2.5",
+  "model_source": "Phase 2.3a Optimized BiLSTM (no fine-tuning)",
+  "date": "2025-10-29T20:58:08.144655",
+  "thresholds": {
+    "balanced": {
+      "value": 0.55,
+      "description": "F1-optimal threshold for balanced precision/recall",
+      "metrics": {
+        "f1": 0.7455830388692579,
+        "precision": 0.7700729927007299,
+        "recall": 0.7226027397260274
+      }
+    },
+    "safety": {
+      "value": 0.4,
+      "description": "Recall-optimal threshold for maximum fall detection (safety-critical)",
+      "metrics": {
+        "f1": 0.6582278481012658,
+        "precision": 0.5220883534136547,
+        "recall": 0.8904109589041096
+      }
+    },
+    "precision": {
+      "value": 0.6,
+      "description": "Precision-optimal threshold for minimum false alarms",
+      "metrics": {
+        "f1": 0.7049504950495049,
+        "precision": 0.8356807511737089,
+        "recall": 0.6095890410958904
+      }
+    }
+  }
+}

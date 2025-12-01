@@ -1,0 +1,241 @@
+🐛 FALL DETECTION DEBUG PROMPT FOR AUGMENT AI
+================================================
+
+PROBLEM:
+--------
+The fall detection buffer correctly fills from 1/30 to 30/30, but then:
+- Buffer stays at "30/30 frames (100%)" ← This is CORRECT! (sliding window)
+- Probability stays at "0%" ← This is WRONG! Should update every frame
+- Status stays at "NO FALL" ← This is WRONG! Should change when falling
+
+EXPECTED BEHAVIOR:
+------------------
+1. Buffer fills: 1/30 → 2/30 → ... → 30/30 (first 1 second)
+2. Buffer STAYS at 30/30 (sliding window removes oldest frame)
+3. Probability updates EVERY frame after buffer is full
+4. Probability ranges:
+   - Standing still: 0-10%
+   - Bending forward: 10-50%
+   - Falling: 85-100% → Triggers emergency alert
+
+CURRENT BEHAVIOR:
+-----------------
+Buffer: 30/30 frames (100%)  ← Correct, stays here
+Probability: 0%              ← WRONG! Never changes
+Status: NO FALL              ← WRONG! Never changes
+
+ROOT CAUSES TO CHECK:
+---------------------
+1. YOLO not detecting person (all keypoints are 0)
+2. Model inference not running (predict() not called after buffer is full)
+3. Model returning 0 for all inputs (TFLite loading issue)
+4. UI not updating (probability calculated but not displayed)
+
+DEBUGGING STEPS:
+----------------
+
+Step 1: Add logging to YoloPoseEstimator
+-----------------------------------------
+In YoloPoseEstimator.estimatePose():
+
+```kotlin
+fun estimatePose(bitmap: Bitmap): FloatArray {
+    // ... YOLO inference code ...
+    
+    val keypoints = FloatArray(34)
+    
+    // Extract keypoints
+    for (kptIdx in 0 until 17) {
+        // ... extract x, y, conf ...
+        if (conf > 0.3f) {
+            keypoints[kptIdx * 2] = y / 640.0f
+            keypoints[kptIdx * 2 + 1] = x / 640.0f
+        }
+    }
+    
+    // 🔍 ADD THIS:
+    val validCount = keypoints.count { it > 0.0f }
+    Log.d("YoloPose", "Valid keypoints: $validCount/34, Sample: [${keypoints[0]}, ${keypoints[1]}, ${keypoints[2]}, ${keypoints[3]}]")
+    
+    return keypoints
+}
+```
+
+Expected: "Valid keypoints: 28/34, Sample: [0.523, 0.412, 0.534, 0.398]"
+If you see: "Valid keypoints: 0/34, Sample: [0.0, 0.0, 0.0, 0.0]" → YOLO not detecting!
+
+
+Step 2: Add logging to FallDetectionModel
+------------------------------------------
+In FallDetectionModel.predict():
+
+```kotlin
+fun predict(window: Array<FloatArray>): Float {
+    // 🔍 ADD THIS:
+    Log.d("FallModel", "predict() called, window size: ${window.size}")
+    
+    // ... prepare input buffer ...
+    // ... run inference ...
+    
+    val probability = outputBuffer.getFloat()
+    
+    // 🔍 ADD THIS:
+    Log.d("FallModel", "Output probability: $probability")
+    
+    return probability
+}
+```
+
+Expected (every frame after buffer is full):
+"predict() called, window size: 30"
+"Output probability: 0.0234" (changes every frame)
+
+If you DON'T see these logs → Model inference not running!
+
+
+Step 3: Add logging to MainActivity
+------------------------------------
+In MainActivity.processFrame():
+
+```kotlin
+private fun processFrame(bitmap: Bitmap) {
+    // 1. Extract keypoints
+    val keypoints = yoloPoseEstimator.estimatePose(bitmap)
+    
+    // 2. Add to buffer
+    frameBuffer.add(keypoints)
+    if (frameBuffer.size > maxBufferSize) {
+        frameBuffer.removeAt(0)
+    }
+    
+    // 🔍 ADD THIS:
+    Log.d("MainActivity", "Buffer: ${frameBuffer.size}/$maxBufferSize")
+    
+    // 3. Update buffer UI
+    runOnUiThread {
+        tvBufferStatus.text = "Buffer: ${frameBuffer.size}/$maxBufferSize frames"
+    }
+    
+    // 4. Run inference when buffer is full
+    if (frameBuffer.size == maxBufferSize) {
+        val probability = fallDetectionModel.predict(frameBuffer.toTypedArray())
+        
+        // 🔍 ADD THIS:
+        Log.d("MainActivity", "Fall probability: $probability")
+        
+        // 5. Update probability UI
+        runOnUiThread {
+            tvProbability.text = "Probability: ${(probability * 100).toInt()}%"
+            
+            if (probability > 0.85f) {
+                tvStatus.text = "⚠️ FALL DETECTED!"
+                tvStatus.setBackgroundColor(Color.RED)
+                triggerEmergencyAlert()
+            } else {
+                tvStatus.text = "✅ NO FALL"
+                tvStatus.setBackgroundColor(Color.GREEN)
+            }
+        }
+    }
+}
+```
+
+Expected logs (every frame after buffer is full):
+"Buffer: 30/30"
+"Fall probability: 0.0234" (changes every frame)
+
+
+COMMON ISSUES & FIXES:
+----------------------
+
+Issue 1: "Valid keypoints: 0/34" (YOLO not detecting)
+Fix: 
+- Check YOLO model loaded: yolo11n-pose_float32.tflite in assets
+- Check bitmap is valid (not null, correct size)
+- Check YOLO interpreter initialized correctly
+- Try displaying camera preview to verify person is visible
+
+Issue 2: No "predict() called" logs (Model inference not running)
+Fix:
+- Check if (frameBuffer.size == maxBufferSize) condition is met
+- Check frameBuffer is accumulating (not being cleared)
+- Check model interpreter is initialized
+
+Issue 3: "Output probability: 0.0" always (Model returns 0)
+Fix:
+- Check FlexDelegate is initialized BEFORE Interpreter
+- Check TFLite model loaded: fall_detection_model.tflite in assets
+- Check input buffer format: ByteBuffer, nativeOrder(), 4 * 1 * 30 * 34 bytes
+- Check keypoints are in correct format: [y, x] order, normalized [0, 1]
+
+Issue 4: Logs show correct probability but UI doesn't update
+Fix:
+- Ensure runOnUiThread {} is used for UI updates
+- Check TextView references are correct (tvProbability, tvStatus)
+- Check UI thread is not blocked
+
+
+TESTING PROCEDURE:
+------------------
+
+Test 1: Standing Still
+- Expected: Buffer 30/30, Probability 0-10%, Status "NO FALL"
+- Logs: "Valid keypoints: 28/34", "Output probability: 0.0234"
+
+Test 2: Bending Forward
+- Expected: Buffer 30/30, Probability 10-50%, Status "NO FALL"
+- Logs: "Output probability: 0.3521"
+
+Test 3: Falling to Ground
+- Expected: Buffer 30/30, Probability 85-100%, Status "FALL DETECTED"
+- Logs: "Output probability: 0.9987", "FALL DETECTED! Triggering alert..."
+- Alert dialog appears, TTS speaks, phone vibrates
+
+
+CRITICAL REMINDERS:
+-------------------
+1. Buffer SHOULD stay at 30/30 after first second (sliding window)
+2. Probability SHOULD update every frame (30 times per second)
+3. Model inference SHOULD run every frame after buffer is full
+4. YOLO keypoints MUST be in [y, x] order, normalized to [0, 1]
+5. FlexDelegate MUST be initialized before Interpreter for BiLSTM model
+
+
+REFERENCE FILES:
+----------------
+- HOW_TO_TEST_FALL_DETECTION.md - Complete testing guide
+- YOLO_TO_MODEL_COMPLETE_GUIDE.md - YOLO keypoint format
+- AUGMENT_PROMPT_YOLO_FIXED.txt - YOLO integration code
+
+
+ACTION ITEMS:
+-------------
+1. Add all debug logging from Steps 1-3 above
+2. Run the app and check logcat output
+3. Test with standing still, bending, and falling
+4. Share the logs so we can identify the exact issue
+5. Fix based on which logs are missing or incorrect
+
+
+EXPECTED LOGCAT OUTPUT (when working correctly):
+-------------------------------------------------
+YoloPose: Valid keypoints: 28/34, Sample: [0.523, 0.412, 0.534, 0.398]
+MainActivity: Buffer: 30/30
+FallModel: predict() called, window size: 30
+FallModel: Output probability: 0.0234
+MainActivity: Fall probability: 0.0234
+
+(Repeat every frame, probability changes based on movement)
+
+When falling:
+YoloPose: Valid keypoints: 30/34, Sample: [0.823, 0.512, 0.834, 0.498]
+MainActivity: Buffer: 30/30
+FallModel: predict() called, window size: 30
+FallModel: Output probability: 0.9987
+MainActivity: Fall probability: 0.9987
+MainActivity: FALL DETECTED! Triggering emergency alert...
+
+
+COPY-PASTE THIS ENTIRE FILE TO AUGMENT AI IN ANDROID STUDIO
+============================================================
+

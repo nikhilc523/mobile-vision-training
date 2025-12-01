@@ -1,0 +1,423 @@
+================================================================================
+AUGMENT PROMPT: YOLO11-Pose Integration (FIXED VERSION)
+================================================================================
+
+READ THIS FIRST: ml/export/YOLO_TO_MODEL_COMPLETE_GUIDE.md
+
+This prompt integrates YOLO11-Pose for real-time keypoint extraction.
+Follow the guide EXACTLY - it explains all formats and conversions in detail.
+
+================================================================================
+STEP 1: VERIFY MODEL FILE
+================================================================================
+
+Check that this file exists:
+  app/src/main/assets/yolo11n-pose.tflite (11.3 MB)
+
+If missing, copy from:
+  ~/mobile-vision-training/ml/export/yolo11n-pose_float32.tflite
+
+================================================================================
+STEP 2: ADD DEPENDENCIES
+================================================================================
+
+Add to app/build.gradle (in dependencies block):
+
+    implementation 'org.tensorflow:tensorflow-lite:2.14.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.14.0'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.4.4'
+
+================================================================================
+STEP 3: CREATE YoloPoseEstimator CLASS
+================================================================================
+
+Create: app/src/main/java/edu/cs663/falldetect/ml/YoloPoseEstimator.kt
+
+CRITICAL REQUIREMENTS (from YOLO_TO_MODEL_COMPLETE_GUIDE.md):
+
+1. YOLO OUTPUT FORMAT:
+   - Shape: (1, 56, 8400)
+   - Layout: CHW (channels-first) NOT HWC!
+   - Coordinates: 0-640 pixels (NOT normalized!)
+   - Keypoints: [x, y, conf] × 17
+
+2. MODEL INPUT FORMAT:
+   - Shape: (1, 30, 34)
+   - Coordinates: 0-1 normalized
+   - Keypoints: [y, x] × 17 (NO confidence!)
+
+3. CONVERSION STEPS:
+   a. Read YOLO output in CHW format:
+      position = (featureIdx * 8400 + detectionIdx) * 4
+   
+   b. Extract keypoints [x, y, conf]:
+      - Feature 6, 7, 8: nose [x, y, conf]
+      - Feature 9, 10, 11: left_eye [x, y, conf]
+      - ... (see guide for full list)
+      - Feature 54, 55: right_ankle [x, y] (NO CONF!)
+   
+   c. Convert to model format:
+      - Normalize: x/640, y/640
+      - SWAP to [y, x] order!
+      - Filter by conf > 0.3
+      - Use 0.0 for low-confidence keypoints
+
+IMPLEMENTATION:
+
+```kotlin
+class YoloPoseEstimator(context: Context) {
+    companion object {
+        private const val TAG = "YoloPoseEstimator"
+        private const val MODEL_NAME = "yolo11n-pose.tflite"
+        private const val INPUT_SIZE = 640
+        private const val NUM_KEYPOINTS = 17
+        private const val NUM_DETECTIONS = 8400
+        private const val NUM_FEATURES = 56
+        private const val CONFIDENCE_THRESHOLD = 0.3f
+    }
+    
+    private val interpreter: Interpreter
+    private lateinit var outputBuffer: ByteBuffer
+    
+    init {
+        val model = loadModelFile(context, MODEL_NAME)
+        val options = Interpreter.Options()
+        
+        // Try GPU delegate
+        val compatList = CompatibilityList()
+        if (compatList.isDelegateSupportedOnThisDevice) {
+            val gpuDelegate = GpuDelegate(compatList.bestOptionsForThisDevice)
+            options.addDelegate(gpuDelegate)
+            Log.d(TAG, "✅ GPU delegate enabled")
+        } else {
+            Log.d(TAG, "⚠️ GPU not available, using CPU")
+        }
+        
+        interpreter = Interpreter(model, options)
+        Log.d(TAG, "✅ YOLO model loaded")
+    }
+    
+    private fun loadModelFile(context: Context, modelName: String): ByteBuffer {
+        val fileDescriptor = context.assets.openFd(modelName)
+        val inputStream = FileInputStream(fileDescriptor.fileDescriptor)
+        val fileChannel = inputStream.channel
+        val startOffset = fileDescriptor.startOffset
+        val declaredLength = fileDescriptor.declaredLength
+        return fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength)
+    }
+    
+    fun extractKeypoints(bitmap: Bitmap): FloatArray {
+        val startTime = System.currentTimeMillis()
+        
+        // Step 1: Preprocess image
+        val inputBuffer = preprocessImage(bitmap)
+        
+        // Step 2: Run YOLO inference
+        outputBuffer = ByteBuffer.allocateDirect(1 * NUM_FEATURES * NUM_DETECTIONS * 4)
+        outputBuffer.order(ByteOrder.nativeOrder())
+        
+        interpreter.run(inputBuffer, outputBuffer)
+        
+        val inferenceTime = System.currentTimeMillis() - startTime
+        
+        // Step 3: Find best detection
+        outputBuffer.rewind()
+        val bestDetectionIdx = findBestDetection(outputBuffer)
+        
+        if (bestDetectionIdx == null) {
+            Log.w(TAG, "⚠️ No person detected")
+            return FloatArray(34) { 0f }
+        }
+        
+        // Step 4: Extract and convert keypoints
+        val modelKeypoints = convertKeypointsToModelFormat(bestDetectionIdx)
+        
+        Log.d(TAG, "✅ YOLO inference: ${inferenceTime}ms")
+        
+        return modelKeypoints
+    }
+    
+    private fun preprocessImage(bitmap: Bitmap): ByteBuffer {
+        val inputBuffer = ByteBuffer.allocateDirect(1 * INPUT_SIZE * INPUT_SIZE * 3 * 4)
+        inputBuffer.order(ByteOrder.nativeOrder())
+        
+        val resizedBitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, true)
+        
+        // Convert to RGB float [0, 1]
+        for (y in 0 until INPUT_SIZE) {
+            for (x in 0 until INPUT_SIZE) {
+                val pixel = resizedBitmap.getPixel(x, y)
+                val r = (pixel shr 16 and 0xFF) / 255.0f
+                val g = (pixel shr 8 and 0xFF) / 255.0f
+                val b = (pixel and 0xFF) / 255.0f
+                inputBuffer.putFloat(r)
+                inputBuffer.putFloat(g)
+                inputBuffer.putFloat(b)
+            }
+        }
+        
+        return inputBuffer
+    }
+    
+    private fun findBestDetection(outputBuffer: ByteBuffer): Int? {
+        var bestConfidence = 0f
+        var bestDetectionIdx = -1
+        
+        // Object confidence is at feature index 4
+        // Position = (featureIdx * NUM_DETECTIONS + detectionIdx) * 4
+        for (detIdx in 0 until NUM_DETECTIONS) {
+            val position = (4 * NUM_DETECTIONS + detIdx) * 4
+            outputBuffer.position(position)
+            val confidence = outputBuffer.getFloat()
+            
+            if (confidence > bestConfidence) {
+                bestConfidence = confidence
+                bestDetectionIdx = detIdx
+            }
+        }
+        
+        return if (bestConfidence > CONFIDENCE_THRESHOLD) {
+            Log.d(TAG, "✅ Person detected: conf=${String.format("%.2f", bestConfidence)}")
+            bestDetectionIdx
+        } else {
+            null
+        }
+    }
+    
+    private fun convertKeypointsToModelFormat(detectionIdx: Int): FloatArray {
+        val modelKeypoints = FloatArray(34)
+        
+        for (kptIdx in 0 until NUM_KEYPOINTS) {
+            val featureBaseIdx = 6 + kptIdx * 3
+            
+            // Read x coordinate (feature index: featureBaseIdx)
+            outputBuffer.position((featureBaseIdx * NUM_DETECTIONS + detectionIdx) * 4)
+            val x = outputBuffer.getFloat()
+            
+            // Read y coordinate (feature index: featureBaseIdx + 1)
+            outputBuffer.position(((featureBaseIdx + 1) * NUM_DETECTIONS + detectionIdx) * 4)
+            val y = outputBuffer.getFloat()
+            
+            // Read confidence (skip for last keypoint - it doesn't have conf!)
+            val conf = if (kptIdx < 16) {
+                outputBuffer.position(((featureBaseIdx + 2) * NUM_DETECTIONS + detectionIdx) * 4)
+                outputBuffer.getFloat()
+            } else {
+                1.0f  // Assume visible for last keypoint
+            }
+            
+            // Convert to model format
+            if (conf > CONFIDENCE_THRESHOLD) {
+                // Normalize to [0, 1]
+                val normX = x / INPUT_SIZE.toFloat()
+                val normY = y / INPUT_SIZE.toFloat()
+                
+                // CRITICAL: Swap to [y, x] order!
+                modelKeypoints[kptIdx * 2] = normY      // y first!
+                modelKeypoints[kptIdx * 2 + 1] = normX  // x second!
+            } else {
+                // Low confidence → use 0.0
+                modelKeypoints[kptIdx * 2] = 0f
+                modelKeypoints[kptIdx * 2 + 1] = 0f
+            }
+        }
+        
+        // Debug logging (first 3 keypoints)
+        Log.d(TAG, "Keypoints: nose=[${String.format("%.3f", modelKeypoints[0])}, ${String.format("%.3f", modelKeypoints[1])}], " +
+                   "left_eye=[${String.format("%.3f", modelKeypoints[2])}, ${String.format("%.3f", modelKeypoints[3])}], " +
+                   "right_eye=[${String.format("%.3f", modelKeypoints[4])}, ${String.format("%.3f", modelKeypoints[5])}]")
+        
+        return modelKeypoints
+    }
+    
+    fun close() {
+        interpreter.close()
+    }
+}
+```
+
+================================================================================
+STEP 4: UPDATE MainActivity
+================================================================================
+
+Replace DummyKeypointAnalyzer with RealKeypointAnalyzer:
+
+```kotlin
+// In MainActivity.kt
+
+private lateinit var yoloPoseEstimator: YoloPoseEstimator
+
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    
+    // Initialize YOLO
+    yoloPoseEstimator = YoloPoseEstimator(this)
+    
+    // ... rest of onCreate
+}
+
+private fun startMonitoring() {
+    // ... existing code ...
+    
+    // Replace DummyKeypointAnalyzer with RealKeypointAnalyzer
+    val keypointAnalyzer = RealKeypointAnalyzer(
+        yoloPoseEstimator = yoloPoseEstimator,
+        fallDetector = fallDetector,
+        onFallDetected = { probability ->
+            runOnUiThread {
+                showEmergencyDialog(probability)
+            }
+        },
+        onProbabilityUpdate = { probability ->
+            runOnUiThread {
+                updateUI(probability)
+            }
+        }
+    )
+    
+    // ... rest of startMonitoring
+}
+
+override fun onDestroy() {
+    super.onDestroy()
+    yoloPoseEstimator.close()
+}
+```
+
+Create RealKeypointAnalyzer:
+
+```kotlin
+class RealKeypointAnalyzer(
+    private val yoloPoseEstimator: YoloPoseEstimator,
+    private val fallDetector: FallDetector,
+    private val onFallDetected: (Float) -> Unit,
+    private val onProbabilityUpdate: (Float) -> Unit
+) : ImageAnalysis.Analyzer {
+    
+    companion object {
+        private const val TAG = "FallDetect"
+    }
+    
+    override fun analyze(imageProxy: ImageProxy) {
+        val startTime = System.currentTimeMillis()
+        
+        // Convert ImageProxy to Bitmap
+        val bitmap = imageProxy.toBitmap()
+        
+        // Extract keypoints using YOLO
+        val keypoints = yoloPoseEstimator.extractKeypoints(bitmap)
+        
+        // Add to buffer and get probability
+        val probability = fallDetector.addFrame(keypoints)
+        
+        val totalTime = System.currentTimeMillis() - startTime
+        
+        // Update UI
+        onProbabilityUpdate(probability)
+        
+        // Check for fall
+        if (probability > 0.85f) {
+            Log.w(TAG, "🚨 FALL DETECTED! Probability: ${String.format("%.2f%%", probability * 100)}")
+            onFallDetected(probability)
+        } else {
+            Log.d(TAG, "✅ Inference completed: ${totalTime}ms, probability: ${String.format("%.4f", probability)}")
+        }
+        
+        imageProxy.close()
+    }
+}
+```
+
+================================================================================
+STEP 5: TEST INTEGRATION
+================================================================================
+
+1. Build and install app
+2. Click "START MONITORING"
+3. Check logs for:
+   ✅ "YOLO model loaded"
+   ✅ "Person detected: conf=0.XX"
+   ✅ "Keypoints: nose=[y, x], left_eye=[y, x], ..."
+   ✅ "Inference completed: XXms, probability: 0.XXXX"
+
+4. Test scenarios:
+   - Stand still → Probability should be 0.00-0.10 (0-10%)
+   - Bend forward → Probability should increase to 0.10-0.50 (10-50%)
+   - Simulate fall → Probability should spike to 0.85-1.00 (85-100%)
+   - Emergency dialog should appear
+   - TTS should say "A fall is detected. Are you okay?"
+
+================================================================================
+EXPECTED RESULTS
+================================================================================
+
+✅ Camera preview shows real-time video
+✅ Logs show "Person detected" with confidence
+✅ Logs show keypoints in [y, x] format with values 0.0-1.0
+✅ Inference time: 20-50ms (GPU) or 50-100ms (CPU)
+✅ Probability updates in real-time based on movements
+✅ Probability low (~0-10%) when standing
+✅ Probability high (~85-100%) when falling
+✅ Emergency dialog appears on fall detection
+✅ TTS and haptics work correctly
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Issue 1: "No person detected"
+→ Check camera preview is working
+→ Check image preprocessing (RGB, normalized to [0,1])
+→ Lower confidence threshold to 0.2
+
+Issue 2: Probability always 0%
+→ Check keypoints are in [y, x] order (NOT [x, y]!)
+→ Check keypoints are normalized to [0, 1]
+→ Add logging to see actual keypoint values
+
+Issue 3: Buffer overflow error
+→ Check you're reading output in CHW format
+→ Position = (featureIdx * 8400 + detectionIdx) * 4
+
+Issue 4: Slow inference (>200ms)
+→ Check GPU delegate is enabled
+→ Check image is resized to 640×640 before inference
+
+================================================================================
+VERIFICATION CHECKLIST
+================================================================================
+
+[ ] Model file exists in assets/
+[ ] Dependencies added to build.gradle
+[ ] YoloPoseEstimator class created
+[ ] RealKeypointAnalyzer class created
+[ ] MainActivity updated to use RealKeypointAnalyzer
+[ ] App builds successfully
+[ ] Camera preview works
+[ ] Logs show "Person detected"
+[ ] Logs show keypoints in [y, x] format
+[ ] Keypoint values are 0.0-1.0
+[ ] Inference time < 100ms
+[ ] Probability updates in real-time
+[ ] Probability low when standing
+[ ] Probability high when falling
+[ ] Emergency dialog appears on fall
+[ ] TTS and haptics work
+
+================================================================================
+FINAL NOTE
+================================================================================
+
+This integration is based on the COMPLETE GUIDE:
+  ml/export/YOLO_TO_MODEL_COMPLETE_GUIDE.md
+
+If anything is unclear, refer to that guide for detailed explanations of:
+- YOLO output format (CHW layout, coordinate system)
+- Model input format ([y, x] order, normalization)
+- Conversion process (step-by-step with code)
+- Common issues and solutions
+
+Follow the guide EXACTLY and the integration will work! 🎯
+
+================================================================================
+
