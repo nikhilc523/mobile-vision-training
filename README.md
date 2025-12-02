@@ -450,21 +450,7 @@ The Android application:
 - **Memory Usage:** ~200 MB
 - **Battery Impact:** Minimal (optimized TFLite models)
 
----
-
-## 🎓 **Academic Context**
-
-**Course:** Mobile Vision and Deep Learning
-**Institution:** [Your University]
-**Semester:** Fall 2024
-
-**Team Members:**
-- **Nikhil Chowdary** - Model training, Android integration
-- **Kushal** - Data preprocessing, testing
-- **Nandini** - Dataset collection, documentation
-- **Niharika** - UI/UX design, video recording
-
----
+--
 
 ## 📚 **Documentation**
 
@@ -546,10 +532,6 @@ keypoint_quality = (number of detected keypoints) / 17
 
 ---
 
-## 📄 **License**
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
 ## 🙏 **Acknowledgments**
@@ -571,21 +553,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Focal Loss for Dense Object Detection](https://arxiv.org/abs/1708.02002)
 
 ---
-
-## 📧 **Contact**
-
-For questions or collaboration:
-- **Email:** nikhil@example.com
-- **GitHub:** [@nikhilc523](https://github.com/nikhilc523)
-- **Project Link:** [https://github.com/nikhilc523/mobile-vision-training](https://github.com/nikhilc523/mobile-vision-training)
-
----
-
-## ⭐ **Star This Repository**
-
-If you find this project useful, please consider giving it a star! ⭐
-
----
-
-**Last Updated:** December 2024
-all machine learning and Colab work (pose extraction, LSTM model, data notes)
