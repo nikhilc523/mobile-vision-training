@@ -1,16 +1,10 @@
-# 🎓 **Gemini Fine-Tuning Assignment - What Your Professor Wants**
+# 🎓 **Gemini Fine-Tuning Assignment *
 
-## ❓ **Your Question: "Custom Dataset" = URFD + Le2i?**
 
-**YES! You're absolutely right!** ✅
-
-Your professor wants you to use **YOUR FULL TRAINING DATASET** (URFD + Le2i + UCF101), NOT just the 8 test videos.
 
 ---
 
-## 📊 **What is "Your Custom Dataset"?**
-
-### **Your Custom Dataset = The SAME dataset you used for LSTM training**
+### **Custom Dataset = The SAME dataset you used for LSTM training**
 
 - **URFD:** 70 fall videos + 40 ADL (non-fall) videos
 - **Le2i:** 191 fall videos + 130 non-fall videos  
@@ -25,15 +19,6 @@ Your professor wants you to use **YOUR FULL TRAINING DATASET** (URFD + Le2i + UC
 - ✅ It's specific to YOUR fall detection project
 
 ---
-
-## 🎯 **What Your Professor Wants**
-
-Your professor wants you to:
-
-1. ✅ Take the Gemini fine-tuning notebook
-2. ✅ Replace the sample dataset (Butterflies/Book Cover VQA) with **YOUR URFD + Le2i dataset**
-3. ✅ Fine-tune Gemini to detect falls using YOUR data
-4. ✅ Compare Gemini vs your LSTM model
 
 **Why?** To learn about different ML approaches:
 - **Your LSTM:** Trains from scratch on keypoints
